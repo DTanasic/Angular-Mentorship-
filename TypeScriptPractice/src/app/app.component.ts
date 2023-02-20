@@ -1,3 +1,4 @@
+import { Customer } from './models/customer.model';
 import { Employee } from './models/employee.model';
 import { Component, OnInit } from '@angular/core';
 import { Candidate } from './models/candidate.model';
@@ -25,8 +26,12 @@ export class AppComponent implements OnInit {
     const employee1=new Employee(2,"Petar","petar@gmail.com",381654444,"BackEnd");
     console.log(employee,employee1);
 
+    const customer =new Customer(1,"Petar","petar@gmail.com",38144444,"Pere Perica 21");
+    const displayCustomer=customer.displayCustomer();
+    console.log(displayCustomer);
   }
-  printCandidates (candidates:Candidate[]) {
+
+  printCandidates(candidates:Candidate[]):string {
     let message:string="";
     for( let candidate of candidates) {
       message+=candidate.firstName + " "+ candidate.lastName + ":"+candidate.birthday;
