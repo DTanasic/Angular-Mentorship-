@@ -19,4 +19,8 @@ export class Customer {
     return message;
   }
 
+  getName():string {
+    return this.name;
+  }
+
 }

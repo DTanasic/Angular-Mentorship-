@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
     const customer =new Customer(1,"Petar","petar@gmail.com",38144444,"Pere Perica 21");
     const displayCustomer=customer.displayCustomer();
     console.log(displayCustomer);
+
+    const customer1 =new Customer(2,"Marko","marko@gmail.com",3811111,"Mike Alasa 68");
+    const displayName=customer1.getName();
+    console.log(displayName);
   }
 
   printCandidates(candidates:Candidate[]):string {
