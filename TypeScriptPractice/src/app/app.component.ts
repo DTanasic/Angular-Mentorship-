@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Candidate } from './models/candidate.model';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +10,6 @@ export class AppComponent implements OnInit {
   title = 'TypeScriptPractice';
 
   ngOnInit(): void {
-  class Candidate {
-    firstName:string;
-    lastName:string;
-    birthday:Date;
-
-    constructor (firstName:string,lastName:string,birthday:Date){
-      this.firstName=firstName;
-      this.lastName=lastName;
-      this.birthday=birthday;
-    }
-
-  }
-
 
     const candidate = new Candidate('Petar','Petrovic',new Date(2001 , 1,1))
     const candidate1 = new Candidate('Marko','Markovic',new Date(1980 , 21,1))
@@ -30,7 +18,19 @@ export class AppComponent implements OnInit {
 
     let candidateArray:Candidate[]= [candidate,candidate1];
     console.log(candidateArray);
+    const candidates:Candidate[]=[candidate,candidate1]
+    const displayMessage=this.printCandidates(candidates)
+    console.log(displayMessage);
+  }
+  printCandidates (candidates:Candidate[]) {
+    let message:string="";
+    for( let candidate of candidates) {
+      message+=candidate.firstName + " "+ candidate.lastName + ":"+candidate.birthday;
+    }
+    return message;
   }
 
+
 }
+
 
