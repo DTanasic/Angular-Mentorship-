@@ -1,3 +1,4 @@
+import { User } from './models/user.model';
 import { Address } from './models/adress.model';
 import { Customer } from './models/customer.model';
 import { Employee } from './models/employee.model';
@@ -37,6 +38,13 @@ export class AppComponent implements OnInit {
     const displayName=customer1.getName();
     console.log(displayName);
     console.log(customer1)
+
+    const user:User=new User(1,"Pera","pera@gmail.com",38164111);
+    const adressStefan:Address=new Address("Lole Ribara",198,"Belgrade","Serbia");
+    const customer3:Customer=new Customer(1,"Stefan","stefan@gmail.com",3816765521,adressStefan);
+    const employeeMarko:Employee=new Employee(3,"Marko","marko@gmail.com",38162555888,"FullStack");
+
+
   }
 
   printCandidates(candidates:Candidate[]):string {

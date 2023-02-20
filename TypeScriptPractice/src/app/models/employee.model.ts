@@ -1,15 +1,9 @@
-export class Employee {
-  id:number;
-  name:string;
-  email:string;
-  phone:number;
+import { User } from './user.model';
+export class Employee extends User {
   jobTitle:string;
 
   constructor (id:number, name:string, email:string,phone:number,jobTitle:string) {
-    this.id=id;
-    this.name=name;
-    this.email=email;
-    this.phone=phone;
+    super(id,name,email,phone)
     this.jobTitle=jobTitle;
   }
 }
