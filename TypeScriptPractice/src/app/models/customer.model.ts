@@ -1,12 +1,15 @@
-export class Customer {
+import { Address } from './adress.model';
+export class Customer  {
   private id:number;
   private name:string;
   private email:string;
   private phone:number;
-  private address:string;
+  private address:Address;
 
 
-  constructor(id:number,name:string,email:string,phone:number,adress:string) {
+
+
+  constructor(id:number,name:string,email:string,phone:number,adress:Address) {
     this.id=id,
     this.name=name;
     this.email=email;

@@ -1,3 +1,4 @@
+import { Address } from './models/adress.model';
 import { Customer } from './models/customer.model';
 import { Employee } from './models/employee.model';
 import { Component, OnInit } from '@angular/core';
@@ -26,13 +27,16 @@ export class AppComponent implements OnInit {
     const employee1=new Employee(2,"Petar","petar@gmail.com",381654444,"BackEnd");
     console.log(employee,employee1);
 
-    const customer =new Customer(1,"Petar","petar@gmail.com",38144444,"Pere Perica 21");
+    const adress:Address=new Address("Pere Perica",15,"Belgrade","Serbia")
+    const customer =new Customer(1,"Petar","petar@gmail.com",38144444,adress);
     const displayCustomer=customer.displayCustomer();
     console.log(displayCustomer);
 
-    const customer1 =new Customer(2,"Marko","marko@gmail.com",3811111,"Mike Alasa 68");
+    const adress1:Address=new Address("Mike Alasa",68,"Belgrade","Serbia")
+    const customer1 =new Customer(2,"Marko","marko@gmail.com",3811111,adress1);
     const displayName=customer1.getName();
     console.log(displayName);
+    console.log(customer1)
   }
 
   printCandidates(candidates:Candidate[]):string {
