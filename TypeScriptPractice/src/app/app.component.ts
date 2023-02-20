@@ -1,3 +1,4 @@
+import { Product } from './models/product.model';
 import { User } from './models/user.model';
 import { Address } from './models/adress.model';
 import { Customer } from './models/customer.model';
@@ -18,8 +19,9 @@ export class AppComponent implements OnInit {
     const candidate1 = new Candidate('Marko','Markovic',new Date(1980 , 21,1))
     console.log(candidate,candidate1);
 
-    let candidateArray:Candidate[]= [candidate,candidate1];
+    const candidateArray:Candidate[]= [candidate,candidate1];
     console.log(candidateArray);
+
     const candidates:Candidate[]=[candidate,candidate1]
     const displayMessage=this.printCandidates(candidates)
     console.log(displayMessage);
@@ -44,7 +46,14 @@ export class AppComponent implements OnInit {
     const customer3:Customer=new Customer(1,"Stefan","stefan@gmail.com",3816765521,adressStefan);
     const employeeMarko:Employee=new Employee(3,"Marko","marko@gmail.com",38162555888,"FullStack");
 
-
+    const product:Product=new Product(1,"Laptop",1000,"Asus");
+    const product1:Product=new Product(2,"Monitor",500,"LG");
+    const product2:Product=new Product(3,"Mouse",100,"Genius");
+    const product3:Product=new Product(4,"Keyboard",100,"msi");
+    const product4:Product=new Product(5,"Case",50,"Asus");
+    const products:Product[]=[product,product1,product2,product3,product4];
+    const displayProduct=product.getInformation(products);
+    console.log(displayProduct);
   }
 
   printCandidates(candidates:Candidate[]):string {
