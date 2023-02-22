@@ -122,8 +122,17 @@ export class AppComponent implements OnInit {
     const result1=job2.getSalary();
     console.log(result1);
 
+    const calculate=this.calculate(5,10);
+    const calculate2=this.calculate(15,20);
+    const calculate3=this.calculate(8,15);
+
+
   }
 
+    calculate (a:number,b:number) {
+      const sumResult=a+b;
+      return console.log("a:"+ a ,"b:"+ b ,"sum:" + sumResult)
+    }
 
 
   printCandidates(candidates:Candidate[]):string {
