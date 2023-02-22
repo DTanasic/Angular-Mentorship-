@@ -1,3 +1,4 @@
+import { Book } from './models/book.modal';
 import { Post } from './models/post.model';
 import { BaseEntety } from './models/baseEntity.model';
 import { Product } from './models/product.model';
@@ -91,7 +92,30 @@ export class AppComponent implements OnInit {
       numberOfLikse:500,
     }
     console.log(post,post2);
+
+    const book:Book= {
+      id:1,
+      title:"Hunger Games",
+      descrtiption:"Hunger Games trilogy",
+      dateCreated:new Date(),
+      author:"Collins, Suzanne",
+      numberOfStars:4,
+      category:"Young Adult Fiction",
+    }
+    const book2:Book= {
+      id:2,
+      title:"Da Vinci Code",
+      descrtiption:"leondardo",
+      dateCreated:new Date(),
+      author:"Brown, Dan",
+      numberOfStars:5,
+      category:"Crime, Thriller & Adventure",
+    }
+    console.log(book,book2);
+
   }
+
+
 
   printCandidates(candidates:Candidate[]):string {
     let message:string="";
