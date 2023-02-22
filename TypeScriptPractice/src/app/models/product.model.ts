@@ -13,6 +13,10 @@ export class Product implements BaseEntety {
     this.price=price;
     this.description=description;
   }
+
+  sayHello(): void {
+    console.log("Hello from Product class")
+  }
   getInformation(products:Product[]):string {
     let info:string="";
     for(let product of products) {

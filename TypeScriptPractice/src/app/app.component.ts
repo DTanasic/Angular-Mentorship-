@@ -63,13 +63,17 @@ export class AppComponent implements OnInit {
     const adressUros:Address=new Address("Nikole Tesle",65,"Belgrade","Serbia");
     const customer4:Customer=new Customer(1,"Uros","uros@gmail.com",38165444585,adressUros);
     const employee2:Employee=new Employee (1,"Nemanja","nemanja@gmail.com",3816788899,"QA");
-
     const BaseEntety:BaseEntety={
       id:1,
+      sayHello(){
+      }
     }
     console.log("A class can inherit another class. An Interface cannot inherit a class.")
 
-
+    const user4:User=new User(1,"Jovan","jovan@gmail.com",381654488);
+    const userMessage=user4.sayHello();
+    const product7:Product=new Product(1,"Egg",0.25,"White Egg")
+    const productMessage=product7.sayHello();
 
 
 
