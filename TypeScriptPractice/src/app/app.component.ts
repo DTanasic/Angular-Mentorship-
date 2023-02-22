@@ -1,3 +1,4 @@
+import { Job } from './models/job.model';
 import { Book } from './models/book.modal';
 import { Post } from './models/post.model';
 import { BaseEntety } from './models/baseEntity.model';
@@ -112,6 +113,22 @@ export class AppComponent implements OnInit {
       category:"Crime, Thriller & Adventure",
     }
     console.log(book,book2);
+
+    const job:Job={
+      id:1,
+      title:"FrontEnd",
+      description:"Web Apps and Design",
+      workHours:40,
+      pricePerHour:50,
+    }
+    const job2:Job={
+      id:2,
+      title:"BackEnd",
+      description:"Web Apps and Data",
+      workHours:40,
+      pricePerHour:50,
+    }
+    console.log(job,job2);
 
   }
 
