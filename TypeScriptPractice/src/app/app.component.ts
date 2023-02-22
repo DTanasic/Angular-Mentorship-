@@ -114,21 +114,13 @@ export class AppComponent implements OnInit {
     }
     console.log(book,book2);
 
-    const job:Job={
-      id:1,
-      title:"FrontEnd",
-      description:"Web Apps and Design",
-      workHours:40,
-      pricePerHour:50,
-    }
-    const job2:Job={
-      id:2,
-      title:"BackEnd",
-      description:"Web Apps and Data",
-      workHours:40,
-      pricePerHour:50,
-    }
-    console.log(job,job2);
+    const job:Job = new Job(1,"FrontEnd","Design",20,50);
+    const result=job.getSalary();
+    console.log(result);
+
+    const job2:Job = new Job(1,"BackEnd","Design",30,50);
+    const result1=job2.getSalary();
+    console.log(result1);
 
   }
 
