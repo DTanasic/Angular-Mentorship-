@@ -1,3 +1,4 @@
+import { Post } from './models/post.model';
 import { BaseEntety } from './models/baseEntity.model';
 import { Product } from './models/product.model';
 import { User } from './models/user.model';
@@ -75,8 +76,21 @@ export class AppComponent implements OnInit {
     const product7:Product=new Product(1,"Egg",0.25,"White Egg")
     const productMessage=product7.sayHello();
 
-
-
+    const post:Post= {
+      id:1,
+      title:"Facebook",
+      description:"My Facebook Profile",
+      dateCreated: new Date(),
+      numberOfLikse:200,
+    }
+    const post2:Post= {
+      id:2,
+      title:"Instagram",
+      description:"My Instagram Profile",
+      dateCreated:new Date(),
+      numberOfLikse:500,
+    }
+    console.log(post,post2);
   }
 
   printCandidates(candidates:Candidate[]):string {
