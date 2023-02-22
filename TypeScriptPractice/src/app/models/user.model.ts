@@ -1,4 +1,6 @@
-export class User {
+import { BaseEntety } from './baseEntity.model';
+
+export class User implements BaseEntety {
   id:number;
   name:string;
   email:string;

@@ -1,3 +1,4 @@
+import { BaseEntety } from './models/baseEntity.model';
 import { Product } from './models/product.model';
 import { User } from './models/user.model';
 import { Address } from './models/adress.model';
@@ -54,6 +55,24 @@ export class AppComponent implements OnInit {
     const products:Product[]=[product,product1,product2,product3,product4];
     const displayProduct=product.getInformation(products);
     console.log(displayProduct);
+
+    const product5:Product=new Product(1,"Apple",2,"Green");
+    const product6:Product=new Product(2,"Banana",1.5,"Yellow");
+    const user2:User=new User(1,"Petar","petar@gmail.com",38163111222);
+    const user3:User=new User(2,"Nikola","nikola@gmail.com",3816844455);
+    const adressUros:Address=new Address("Nikole Tesle",65,"Belgrade","Serbia");
+    const customer4:Customer=new Customer(1,"Uros","uros@gmail.com",38165444585,adressUros);
+    const employee2:Employee=new Employee (1,"Nemanja","nemanja@gmail.com",3816788899,"QA");
+
+    const BaseEntety:BaseEntety={
+      id:1,
+    }
+    console.log("A class can inherit another class. An Interface cannot inherit a class.")
+
+
+
+
+
   }
 
   printCandidates(candidates:Candidate[]):string {
