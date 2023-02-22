@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
     const book:Book= {
       id:1,
       title:"Hunger Games",
-      descrtiption:"Hunger Games trilogy",
+      description:"Hunger Games trilogy",
       dateCreated:new Date(),
       author:"Collins, Suzanne",
       numberOfStars:4,
@@ -106,7 +106,7 @@ export class AppComponent implements OnInit {
     const book2:Book= {
       id:2,
       title:"Da Vinci Code",
-      descrtiption:"leondardo",
+      description:"leondardo",
       dateCreated:new Date(),
       author:"Brown, Dan",
       numberOfStars:5,

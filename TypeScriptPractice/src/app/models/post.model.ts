@@ -1,7 +1,6 @@
-export interface Post {
-  id:number,
-  title:string,
-  description:string,
+import { Same } from './same.modal';
+
+export interface Post extends Same {
   dateCreated:Date,
   numberOfLikse:number;
 }

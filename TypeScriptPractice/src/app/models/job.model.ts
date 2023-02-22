@@ -1,7 +1,6 @@
-export interface Job {
-  id:number,
-  title:string,
-  description:string;
+import { Same } from './same.modal';
+
+export interface Job extends Same {
   workHours:number;
   pricePerHour:number;
 }
