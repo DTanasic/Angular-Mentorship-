@@ -1,5 +1,5 @@
-import { DateFormats } from './models/enums/dateformats.enum';
-import { SumResult } from './models/types/sumresult.type';
+import { DateFormats } from './models/enums/date-formats.enum';
+import { SumResult } from './models/types/sum-result.type';
 import { BaseEntity } from './models/interfaces/base-entity.model';
 import { Job } from './models/job.model';
 import { Book } from './models/interfaces/book.modal';
@@ -198,6 +198,11 @@ export class AppComponent implements OnInit {
     const calculate2 = this.calculate(15, 20);
     const calculate3 = this.calculate(8, 15);
     console.log(calculate, calculate2, calculate3);
+
+    const firstDate = this.formatDate(new Date(), DateFormats.YYYYMMDD);
+    const secoundDate = this.formatDate(new Date(), DateFormats.DDMMYYYY);
+    const thirdDate = this.formatDate(new Date(), DateFormats.MMDDYYYY);
+    console.log(firstDate, secoundDate, thirdDate);
   }
 
   formatDate(date: Date, dateFormat: DateFormats): string {
