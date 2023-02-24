@@ -1,4 +1,4 @@
-import { BaseProperty } from './basepropery.model';
+import { BaseProperty } from './base-propery.model';
 
 export interface Book extends BaseProperty {
   dateCreated: Date;

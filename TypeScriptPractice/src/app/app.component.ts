@@ -1,9 +1,9 @@
-import { DateFormats } from './models/enum/dateformat.enum';
-import { SumResult } from './models/type/sumresult.type';
-import { BaseEntity } from './models/interface/baseEntity.model';
+import { DateFormats } from './models/enums/dateformats.enum';
+import { SumResult } from './models/types/sumresult.type';
+import { BaseEntity } from './models/interfaces/base-entity.model';
 import { Job } from './models/job.model';
-import { Book } from './models/interface/book.modal';
-import { Post } from './models/interface/post.model';
+import { Book } from './models/interfaces/book.modal';
+import { Post } from './models/interfaces/post.model';
 import { Product } from './models/product.model';
 import { User } from './models/user.model';
 import { Address } from './models/adress.model';
