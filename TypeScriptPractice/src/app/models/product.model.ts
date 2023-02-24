@@ -1,7 +1,8 @@
-import { BaseEntety } from './baseEntity.model';
+import { BaseEntity } from './interface/baseEntity.model';
 
 
-export class Product implements BaseEntety {
+
+export class Product implements BaseEntity {
   readonly id:number;
   readonly title:string;
   readonly price:number;
@@ -17,12 +18,17 @@ export class Product implements BaseEntety {
   sayHello(): void {
     console.log("Hello from Product class")
   }
-  getInformation(products:Product[]):string {
-    let info:string="";
-    for(let product of products) {
-      info+=product.title + " " +  "$"+product.price + " " + product.description + " ," + " ";
-    }
-    return info;
+
+  getTitle () {
+    return this.title;
   }
+
+  getPrice () {
+    return this.price;
   }
+
+  getDescriprtion () {
+    return this.description;
+  }
+}
 

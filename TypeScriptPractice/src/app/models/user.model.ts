@@ -1,6 +1,7 @@
-import { BaseEntety } from './baseEntity.model';
+import { BaseEntity } from './interface/baseEntity.model';
 
-export class User implements BaseEntety {
+
+export class User implements BaseEntity {
   id:number;
   name:string;
   email:string;
