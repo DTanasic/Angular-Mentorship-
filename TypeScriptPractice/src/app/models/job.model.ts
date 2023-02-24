@@ -1,4 +1,4 @@
-import { BaseProperty } from './interfaces/base-propery.model';
+import { BaseProperty } from './interfaces/base-property.model';
 
 export class Job implements BaseProperty {
   id: number;
