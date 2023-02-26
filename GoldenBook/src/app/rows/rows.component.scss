@@ -1,0 +1,15 @@
+.bottom {
+  display: flex;
+  justify-content: end;
+  ul {
+    display: flex;
+  }
+  li {
+    margin-left: 10px;
+    color: white;
+
+    a {
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../styles/variables.scss";
+
+
+header {
+  background: linear-gradient(0deg, rgba(22,15,9,1) 0%, rgba(127,123,111,1) 100%);
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    li {
+      display: flex;
+      align-items: center;
+      .logo {
+        color: $text-color;
+        width: 13em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      i  {
+        margin-right: 25px;
+        color: $text-color;
+      }
+    }
+  }
+}
+

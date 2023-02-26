@@ -1,0 +1,58 @@
+
+@import "../styles/variables.scss";
+
+.middle {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box {
+  width: 32%;
+  margin-bottom: 20px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: $text-color;
+  h4 { margin-left:5px;}
+  .box-inside {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .box-content {
+    border: 0px ;
+    width: 50%;
+  }
+  .box-par  {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400 !important ;
+  }
+  .box-par em {
+    word-break: break-all;
+  }
+  .box-info {
+    width: 45%;
+  }
+  .bookoverveiw{
+    margin-top: 15px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: gray;
+    color: white;
+  }
+  .box-content img {
+  width: 100%;
+  height: 90%;
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+@import "styles/variables.scss";
+
+.container {
+  background-image: url(../assets/img/background.jpg);
+  background-size:contain;
+}
+
+.wrapper {
+  margin:10px 100px;
+}
