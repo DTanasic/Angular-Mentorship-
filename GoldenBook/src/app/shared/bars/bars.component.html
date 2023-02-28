@@ -2,8 +2,13 @@
   <h1>Homepage</h1>
   <div class="inputs">
     <div class="search">
-      <input type="text" title="Search" placeholder="Search by Book Name" />
-      <button id="search-btn">
+      <input
+        #search
+        type="text"
+        title="Search"
+        placeholder="Search by Book Name"
+      />
+      <button (click)="getSearchValue(search.value)" id="search-btn">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
     </div>
@@ -18,4 +23,5 @@
       <i class="fa fa-sort-desc" aria-hidden="true"></i>
     </div>
   </div>
+  <p class="value">Search value: {{ displaySearch }}</p>
 </div>
