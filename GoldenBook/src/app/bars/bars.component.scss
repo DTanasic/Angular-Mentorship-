@@ -1,11 +1,14 @@
 @import "../styles/variables.scss";
 
+.top {
+  width:100%;
+}
+
 .top h1 {
   color:$text-color;
 }
 
 .inputs {
-  width: 100%;
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -14,7 +17,7 @@
 .filter , .search {
   border:0.5px solid black;
   border-radius: 5px;
-  width: 45%;
+  width: 48%;
   background: $text-color;
   padding: 10px 25px;
 }
@@ -45,3 +48,4 @@ input::-webkit-calendar-picker-indicator {
   border: 0px transparent;
   background-color: $text-color;
 }
+

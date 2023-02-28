@@ -1,10 +1,10 @@
 @import "styles/variables.scss";
 
-.container {
+body {
   background-image: url(../assets/img/background.jpg);
-  background-size:contain;
+  background-size: cover;
 }
 
 .wrapper {
-  margin:10px 100px;
+  margin: 50px;
 }

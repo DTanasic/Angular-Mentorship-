@@ -1,0 +1,43 @@
+@import "../styles/variables.scss";
+
+
+  h4 { margin-left:5px;}
+
+  .box-inside {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .box-content {
+    border: 0px ;
+    width: 50%;
+  }
+
+  .box-par  {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400 !important ;
+  }
+
+  .box-par em {
+    word-break: break-all;
+  }
+
+  .box-info {
+    width: 45%;
+  }
+
+  .bookoverview{
+    width: 55%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: gray;
+    color:$text-color;
+  }
+
+  .box-content img {
+  width: 100%;
+  height: 90%;
+  }
