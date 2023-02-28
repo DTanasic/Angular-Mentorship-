@@ -1,0 +1,17 @@
+@import "../styles/variables.scss";
+.bottom {
+  display: flex;
+  justify-content: end;
+  ul {
+    display: flex;
+    li {
+      margin-left: 10px;
+      color: $text-color;
+      a {
+        margin-left: 20px;
+        color: $text-color;
+      }
+    }
+  }
+
+}

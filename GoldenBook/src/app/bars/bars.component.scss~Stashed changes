@@ -1,0 +1,51 @@
+@import "../styles/variables.scss";
+
+.top {
+  width:100%;
+}
+
+.top h1 {
+  color:$text-color;
+}
+
+.inputs {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter , .search {
+  border:0.5px solid black;
+  border-radius: 5px;
+  width: 48%;
+  background: $text-color;
+  padding: 10px 25px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+    input {
+    width: 100%;
+    border: 0px transparent;
+    background-color: $text-color;
+  }
+  input,:focus-visible {
+    outline:none;
+  }
+}
+
+.filter input {
+  width: 97%;
+  border: 0px transparent;
+  background-color: $text-color;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+#search-btn {
+  border: 0px transparent;
+  background-color: $text-color;
+}
+
