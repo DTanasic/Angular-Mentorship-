@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+
+footer {
+  color: $text-color;
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(black ,gray, rgb(182, 174, 174));
+  p {
+
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    padding: 10px;
+  }
+}
+
