@@ -1,0 +1,21 @@
+@import "../styles/variables";
+
+
+.top {
+  width:100%;
+}
+
+ h1 {
+  color:$text-color;
+}
+
+.inputs {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.display-message {
+  color: $text-color;
+}

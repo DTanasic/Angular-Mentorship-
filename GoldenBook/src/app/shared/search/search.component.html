@@ -1,6 +1,11 @@
 <div class="search">
-  <input #search type="text" title="Search" placeholder="Search by Book Name" />
-  <button (click)="getSearchValue(search.value)" id="search-btn">
+  <input
+    (keyup)="outputSearch($event)"
+    type="text"
+    title="Search"
+    placeholder="Search by Book Name"
+  />
+  <button (click)="onClick()" id="search-btn">
     <i class="fa fa-search" aria-hidden="true"></i>
   </button>
 </div>

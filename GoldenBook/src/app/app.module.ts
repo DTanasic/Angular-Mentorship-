@@ -5,9 +5,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CentralPartComponent } from './central-part/central-part.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CentralPartComponent],
   imports: [BrowserModule, CoreModule, SharedModule, BooksModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

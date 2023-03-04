@@ -18,6 +18,9 @@
     text-align: center;
   }
 }
+.search input,:focus-visible {
+  outline:none;
+}
 #search-btn {
   border: 0px transparent;
   background-color: $text-color;
