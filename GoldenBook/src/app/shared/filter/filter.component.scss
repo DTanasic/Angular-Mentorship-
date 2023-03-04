@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+:host {
+  width: 48%;
+}
+
+.filter  {
+  border:0.5px solid black;
+  border-radius: 5px;
+  width: 100%;
+  background: $text-color;
+}
+
+::ng-deep {
+  .mat-form-field-wrapper {
+    padding: 0px;
+  }
+  .mat-form-field-flex .mat-form-field-appearance-fill{
+    padding: 0em;
+  }
+  .mat-form-field-underline {
+    bottom: 0px;
+  }
+  .mat-select-panel{
+    background-color: $text-color;
+  }
+  .mat-select {
+    margin-left: 10px;
+    text-align: center;
+}
+}
+
+
+

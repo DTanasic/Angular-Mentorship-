@@ -16,3 +16,23 @@
   background-color: $text-color;
   padding: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 49%;
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .box {
+    width: 32%;
+    padding: 10px;
+  }
+}
+
+

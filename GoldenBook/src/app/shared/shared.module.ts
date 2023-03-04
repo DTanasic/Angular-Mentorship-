@@ -1,13 +1,20 @@
+import { FilterComponent } from './filter/filter.component';
+import { SearchComponent } from './search/search.component';
+import { PaginationComponent } from './pagination/pagination.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BarsComponent } from './bars/bars.component';
-import { BookComponent } from './book/book.component';
-import { BooksComponent } from './books/books.component';
-import { RowsComponent } from './rows/rows.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
-  declarations: [BarsComponent, BookComponent, BooksComponent, RowsComponent],
-  imports: [CommonModule],
-  exports: [BarsComponent, BookComponent, BooksComponent, RowsComponent],
+  declarations: [SearchComponent, FilterComponent, PaginationComponent],
+  imports: [CommonModule, MatPaginatorModule, MatSelectModule],
+  exports: [
+    SearchComponent,
+    FilterComponent,
+    PaginationComponent,
+    MatPaginatorModule,
+    MatSelectModule,
+  ],
 })
 export class SharedModule {}

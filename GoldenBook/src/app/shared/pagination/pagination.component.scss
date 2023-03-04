@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.mat-paginator {
+  background: transparent;
+  color: $text-color;
+  #mat-select-value {
+    color: white !important;
+  }
+  .mat-select-arrow {
+    color: white;
+  }
+}
+
