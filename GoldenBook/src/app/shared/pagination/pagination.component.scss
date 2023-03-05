@@ -3,11 +3,14 @@
 .mat-paginator {
   background: transparent;
   color: $text-color;
-  #mat-select-value {
-    color: white !important;
-  }
-  .mat-select-arrow {
-    color: white;
-  }
 }
+::ng-deep {.mat-form-field-wrapper {
+  .mat-select-value-text {
+    color: $text-color;
+  }
+}}
+
+
+
+
 
