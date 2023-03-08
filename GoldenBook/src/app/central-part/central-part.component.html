@@ -4,10 +4,11 @@
     <h1>Homepage</h1>
     <div class="inputs">
       <app-search (displaySearch)="showValue($event)"></app-search>
-      <app-filter></app-filter>
+      <app-filter (displayValue)="showOption($event)"></app-filter>
     </div>
   </div>
   <p class="display-message">{{ displaySearch }}</p>
+  <p class="display-message">{{ displayValue }}</p>
   <!---body of the books part of the site-->
   <app-books></app-books>
   <!--rows part-->
