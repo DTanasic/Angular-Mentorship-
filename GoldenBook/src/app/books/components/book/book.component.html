@@ -1,18 +1,18 @@
-<h4>{{ title }}</h4>
+<h4>{{ book.title }}</h4>
 <div class="box-inside">
   <div class="box-content">
-    <img [src]="src" />
+    <img [src]="book.src" />
   </div>
   <div class="box-info">
     <div class="box-description">
-      <p>{{ name }}</p>
-      <span>{{ category }}</span>
+      <p>{{ book.surname }}</p>
+      <span>{{ book.category }}</span>
       <p class="box-par">
-        <em>{{ description }}</em>
+        <em>{{ book.description }}</em>
       </p>
     </div>
     <div class="book-button">
-      <a class="book-overview" [href]="overview">BOOK OVERVIEW</a>
+      <a class="book-overview" [href]="book.overview">BOOK OVERVIEW</a>
     </div>
   </div>
 </div>
