@@ -1,7 +1,8 @@
 @import "../../styles/variables";
-:host {
+:host  {
   width: 48%;
-}
+  }
+
 
 .filter  {
   border:0.5px solid black;
@@ -10,23 +11,24 @@
   background: $text-color;
 }
 
-::ng-deep {
+ ::ng-deep {
+   .mat-select-panel {
+    background-color: $text-color;
+  }
   .mat-form-field-wrapper {
     padding: 0px;
   }
   .mat-form-field-flex .mat-form-field-appearance-fill{
-    padding: 0em;
+    padding: 0px;
   }
   .mat-form-field-underline {
     bottom: 0px;
   }
-  .mat-select-panel{
-    background-color: $text-color;
-  }
+
   .mat-select {
     margin-left: 10px;
     text-align: center;
-}
+  }
 }
 
 

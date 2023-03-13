@@ -2,10 +2,12 @@
   <mat-select
     (change)="getOptionValue($event)"
     placeholder="Filter by Category"
+    multiple
   >
-    <mat-option value="option1">General </mat-option>
-    <mat-option value="option2">History</mat-option>
-    <mat-option value="option3">Fantasy</mat-option>
-    <mat-option value="option3">Literary</mat-option>
+    <mat-option
+      *ngFor="let categories of categoriesList"
+      [value]="categories"
+      >{{ categories }}</mat-option
+    >
   </mat-select>
 </mat-form-field>

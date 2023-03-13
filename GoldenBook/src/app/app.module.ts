@@ -6,9 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CentralPartComponent } from './central-part/central-part.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, CentralPartComponent],
+  declarations: [AppComponent, CentralPartComponent, SidebarComponent],
   imports: [BrowserModule, CoreModule, SharedModule, BooksModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

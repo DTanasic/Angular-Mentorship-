@@ -1,8 +1,15 @@
 @import "../../styles/variables";
-
+:host ::ng-deep {
 .mat-paginator {
   background: transparent;
   color: $text-color;
+  .mat-select-value {
+    color: $text-color;
+  }
+  .mat-select-arrow {
+    color:$text-color
+  }
+}
 }
 
 

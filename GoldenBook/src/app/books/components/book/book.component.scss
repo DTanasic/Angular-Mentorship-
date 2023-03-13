@@ -1,4 +1,16 @@
 @import "../../../styles/variables";
+:host {
+  width: 30%;
+}
+.box {
+
+  width: 100%;
+  margin-bottom: 20px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: $text-color;
+  padding: 20px;
+}
 
   .box-inside {
     display: flex;
@@ -9,7 +21,7 @@
 
   .box-content {
     border: 0px ;
-    width: 45%;
+    width: 100%;
      img {
       width: 100%;
       }
@@ -18,20 +30,24 @@
   .box-par  {
     font-size: 11px;
     font-weight: 400 !important ;
-    em {
+    margin-bottom: 25px;
+    p {
+      font-style: italic;
       word-wrap:break-word;
     }
   }
   .box-info {
     width: 65%;
     margin-left: 10px;
+    .book-surname {
+      font-weight: bold;
+    }
   }
-.book-button {
-  margin-top: 50px;
-}
+
   .book-overview{
+    letter-spacing:2px;
     width: 55%;
-    padding: 10px 5px;
+    padding: 3px 20px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
@@ -39,12 +55,27 @@
     color:$text-color;
   }
 
-  @media only screen and (min-width: 1024) {
+  @media only screen and (min-width: 1024px) {
+    :host {
+      width: 70%;
+    }
     .box-content {
       width: 50%;
     }
-    .box-par {
-      em {font-size: 10px;}
 
+  }
+  @media only screen and (max-width: 768px) {
+    :host {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    :host {
+      width: 49%;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    :host {
+      width: 32%;
     }
   }

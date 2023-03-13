@@ -1,11 +1,13 @@
 @import "../styles/variables";
 
-
-.top {
-  width:100%;
+.wrapper {
+  margin-top: 25px;
+  width: 100%;
+  padding: 0px 80px;
 }
 
- h1 {
+ h2 {
+  font-size: 40px;
   color:$text-color;
 }
 

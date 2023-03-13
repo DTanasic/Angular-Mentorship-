@@ -1,4 +1,4 @@
-import { Book } from './../../../interfaces/book.model';
+import { Book } from '../../../model/interfaces/book.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
