@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./central-part.component.scss'],
 })
 export class CentralPartComponent implements OnInit {
+  visibleHamburger: boolean = false;
   displaySearch: string = '';
   displayValue: string = '';
   constructor() {}

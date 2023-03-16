@@ -1,0 +1,51 @@
+<div class="sidebar-container">
+  <div class="sidebar-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            <div class="sidebar-btn">
+              <mat-icon class="sidebar-icons">home</mat-icon>
+              <p class="sidebar-btn-text">homepage</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="sidebar-btn" (click)="onToggle()">
+            <a>
+              <mat-icon class="sidebar-icons">reorder</mat-icon>
+              <p class="sidebar-btn-text">Categories</p>
+              <ul *ngIf="category">
+                <li
+                  class="categories-sidebar"
+                  *ngFor="let categories of categoriesList"
+                  [value]="categories"
+                >
+                  {{ categories }}
+                </li>
+              </ul>
+              <mat-icon class="sidebar-icons">arrow_right</mat-icon>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="sidebar-btn" (click)="onClick()">
+            <a>
+              <mat-icon class="sidebar-icons">verified_user</mat-icon>
+              <p class="sidebar-btn-text">Admin</p>
+              <ul *ngIf="adminValue">
+                <li
+                  class="categories-sidebar"
+                  *ngFor="let admin of adminList"
+                  [value]="admin"
+                >
+                  {{ admin }}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

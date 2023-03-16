@@ -1,6 +1,11 @@
 <!--Header-->
 <app-header></app-header>
 <!---Central part of the site-->
-<app-central-part></app-central-part>
+<div class="wrapper">
+  <app-sidebar *ngIf="true"></app-sidebar>
+  <!-- <app-central-part></app-central-part> -->
+  <!-- <app-singlebook></app-singlebook> -->
+  <router-outlet></router-outlet>
+</div>
 <!--footer-->
 <app-footer></app-footer>

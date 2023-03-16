@@ -14,6 +14,6 @@ export class PaginationComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.paginator._intl.itemsPerPageLabel = 'Items per page';
+    this.paginator._intl.itemsPerPageLabel = 'Rows per page';
   }
 }

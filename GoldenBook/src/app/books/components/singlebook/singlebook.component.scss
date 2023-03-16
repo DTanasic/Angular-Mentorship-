@@ -1,0 +1,23 @@
+@import "../book/book.component";
+@import "../../../styles/variables";
+:host {
+  min-height: 65%;
+  width: 50%;
+}
+app-book {
+  display: block;
+  width: 100%;
+  }
+
+
+.single-book-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .single-book-btn {
+  width: 30%;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+}

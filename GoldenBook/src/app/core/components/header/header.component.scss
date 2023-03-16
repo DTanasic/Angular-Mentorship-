@@ -7,10 +7,14 @@ header {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin-right: 25px;
+    padding:0 2em;
     li {
       display: flex;
       align-items: center;
+      .hamburger {
+        background-color: transparent;
+        border: none;
+      }
       .logo {
         padding-left: 35px ;
         color: $text-color;
