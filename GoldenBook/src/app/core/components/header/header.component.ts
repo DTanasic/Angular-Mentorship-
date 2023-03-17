@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() visibleValue = new EventEmitter<any>();
+  @Output() visibleValue = new EventEmitter<boolean>();
 
   constructor() {}
 

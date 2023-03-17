@@ -18,9 +18,9 @@
   }
 
   .box-content {
-    width: 50%;
+    width: 40%;
      img {
-      width: 100%;
+      width: 90%;
       }
   }
 
@@ -28,14 +28,14 @@
     font-size: 11px;
     font-weight: 400 !important ;
     margin-bottom: 25px;
-    max-height: 50%;
+    max-height: 20vh;
     p {
       font-style: italic;
       word-wrap:break-word;
     }
   }
   .box-info {
-    width: 65%;
+    width: 60%;
     margin-left: 10px;
     .book-surname {
       font-weight: bold;

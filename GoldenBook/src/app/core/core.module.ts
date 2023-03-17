@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { AppRoutingModule } from '../app-routing.module';
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, SidebarComponent],
   imports: [
@@ -19,6 +21,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatExpansionModule,
     MatSelectModule,
     MatMenuModule,
+    RouterModule,
+    AppRoutingModule,
   ],
   exports: [FooterComponent, HeaderComponent, SidebarComponent],
 })

@@ -16,7 +16,7 @@ export class BooksComponent implements OnInit {
       category: 'Category:' + Categories.general,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book',
+      overview: '/book/1',
     },
     {
       title: 'My First Love',
@@ -25,7 +25,7 @@ export class BooksComponent implements OnInit {
       category: 'Category:' + Categories.general,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book',
+      overview: './book/2',
     },
     {
       title: 'My Little Life',
@@ -34,7 +34,7 @@ export class BooksComponent implements OnInit {
       surname: ' Name Surname:2005',
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book',
+      overview: './book/3',
     },
     {
       title: 'The Lost Trip',
@@ -43,7 +43,7 @@ export class BooksComponent implements OnInit {
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
       category: 'Category:' + Categories.history,
-      overview: './book',
+      overview: './book/4',
     },
     {
       title: 'Dark',
@@ -52,7 +52,7 @@ export class BooksComponent implements OnInit {
       category: 'Category:' + Categories.fantasy,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book',
+      overview: './book/5',
     },
     {
       title: 'Find Me',
@@ -61,7 +61,7 @@ export class BooksComponent implements OnInit {
       category: 'Category:' + Categories.fantasy,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book',
+      overview: './book/6',
     },
   ];
 

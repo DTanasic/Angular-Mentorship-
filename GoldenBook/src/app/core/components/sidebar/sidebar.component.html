@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li>
-          <a href="index.html">
+          <a routerLink="" routerLinkActive="active">
             <div class="sidebar-btn">
               <mat-icon class="sidebar-icons">home</mat-icon>
               <p class="sidebar-btn-text">homepage</p>
@@ -18,10 +18,10 @@
               <ul *ngIf="category">
                 <li
                   class="categories-sidebar"
-                  *ngFor="let categories of categoriesList"
-                  [value]="categories"
+                  *ngFor="let category of categoriesList"
+                  [value]="category"
                 >
-                  {{ categories }}
+                  {{ category }}
                 </li>
               </ul>
               <mat-icon class="sidebar-icons">arrow_right</mat-icon>

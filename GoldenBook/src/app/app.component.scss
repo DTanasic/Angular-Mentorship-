@@ -3,3 +3,11 @@
 .wrapper {
   display: flex;
 }
+
+
+@media only screen and (max-width:500px) {
+  .wrapper {
+    display: block;
+  }
+
+}
