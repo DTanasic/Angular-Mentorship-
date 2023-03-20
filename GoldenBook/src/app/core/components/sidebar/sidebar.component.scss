@@ -1,62 +1,48 @@
 @import '../../../styles/variables';
 
-:host {
-  width: 30%;
-  margin-right: 10px;
-}
-
 .sidebar-container {
+  width: 300px;
   background-color: transparent;
   border-right: 2px solid white;
   min-height: 95vh;
-
-}
-.sidebar-nav {
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.3);
-  min-height: 95vh;
-  ul{
-    list-style: none;
-    color: white;
-
-    li {
-      padding: 30px 0px;
-      :hover {
-        cursor: pointer;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-      }
-      .sidebar-btn {
-        border: none;
-        color:white;
-        font-size: 20px;
-        text-transform: uppercase;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        .mat-menu-item {
-          background-color: transparent;
+  .sidebar-nav {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 95vh;
+    ul{
+      list-style: none;
+      li {
+        padding: 20px 0px;
+        :hover {
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
           color: white;
         }
-        .sidebar-icon {
-          color: white;
+        .sidebar-btn {
+          color:white;
+          text-transform: uppercase;
+          display: flex;
+
+          .sidebar-btn-text{
+            font-size: 20px;
+            margin-left: 15px;
+            text-transform: uppercase;
+          }
+          .select-sidebar {
+            padding: 25px;
+          }
         }
-
-      .sidebar-btn-text{
-        font-size: 20px;
-        padding-left: 30px;
-        text-transform: uppercase;
       }
-      .select-sidebar {
-        padding: 25px;
-      }
-
+    }
   }
-  }
+}
 
+.active{
+  background-color: gray !important;
+  border-right: 5px solid white !important;
 }
-}
+
 
 

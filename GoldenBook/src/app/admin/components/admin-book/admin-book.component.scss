@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+@import "../../../books/components/singlebook/singlebook.component";
+@import "../../../books/components/book/book.component.scss";
+
+
+.admin-book-btn {
+  text-transform: uppercase;
+  width: 50%;
+  padding: 25px;
+}
+
+
+h2, h1{
+  color: $text-color;
+}

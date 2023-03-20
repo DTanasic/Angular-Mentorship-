@@ -8,9 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SinglebookComponent implements OnInit {
   constructor(private activatedRouter: ActivatedRoute) {}
-
   ngOnInit(): void {
-    const bookId = this.activatedRouter.snapshot.paramMap.get('bookId');
-    return;
+    let bookId = this.activatedRouter.snapshot.paramMap.get('bookId');
+    console.log(bookId);
   }
 }

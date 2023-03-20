@@ -12,6 +12,11 @@ const routes: Routes = [
     path: 'book/:bookId',
     component: SinglebookComponent,
   },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('../app/admin/admin.module').then((module) => module.AdminModule),
+  },
 ];
 
 @NgModule({

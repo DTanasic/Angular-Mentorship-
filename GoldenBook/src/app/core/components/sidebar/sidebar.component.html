@@ -3,46 +3,53 @@
     <nav>
       <ul>
         <li>
-          <a routerLink="" routerLinkActive="active">
-            <div class="sidebar-btn">
-              <mat-icon class="sidebar-icons">home</mat-icon>
-              <p class="sidebar-btn-text">homepage</p>
-            </div>
-          </a>
+          <div
+            class="sidebar-btn"
+            routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <mat-icon class="sidebar-icons">home</mat-icon>
+            <p class="sidebar-btn-text">homepage</p>
+          </div>
         </li>
+        <li></li>
         <li>
           <div class="sidebar-btn" (click)="onToggle()">
-            <a>
-              <mat-icon class="sidebar-icons">reorder</mat-icon>
-              <p class="sidebar-btn-text">Categories</p>
-              <ul *ngIf="category">
-                <li
-                  class="categories-sidebar"
-                  *ngFor="let category of categoriesList"
-                  [value]="category"
-                >
-                  {{ category }}
-                </li>
-              </ul>
-              <mat-icon class="sidebar-icons">arrow_right</mat-icon>
-            </a>
+            <mat-icon class="sidebar-icons">reorder</mat-icon>
+            <p class="sidebar-btn-text">Categories</p>
+            <mat-icon class="sidebar-icons">arrow_right</mat-icon>
+          </div>
+        </li>
+        <li>
+          <div class="sidebar-btn">
+            <ul *ngIf="category">
+              <li
+                class="categories-sidebar"
+                *ngFor="let category of categoriesList"
+                [value]="category"
+              >
+                <a>{{ category }}</a>
+              </li>
+            </ul>
           </div>
         </li>
         <li>
           <div class="sidebar-btn" (click)="onClick()">
-            <a>
-              <mat-icon class="sidebar-icons">verified_user</mat-icon>
-              <p class="sidebar-btn-text">Admin</p>
-              <ul *ngIf="adminValue">
-                <li
-                  class="categories-sidebar"
-                  *ngFor="let admin of adminList"
-                  [value]="admin"
-                >
-                  {{ admin }}
-                </li>
-              </ul>
-            </a>
+            <mat-icon class="sidebar-icons">verified_user</mat-icon>
+            <p routerLink="admin" class="sidebar-btn-text">Admin</p>
+            <mat-icon class="sidebar-icons" [ngClass]="{ rotate: adminValue }"
+              >chevron_right</mat-icon
+            >
+          </div>
+        </li>
+        <li>
+          <div class="sidebar-btn">
+            <ul *ngIf="adminValue">
+              <li class="categories-sidebar" *ngFor="let admin of adminList">
+                <a routerLink="/admin/">{{ admin }} </a>
+              </li>
+            </ul>
           </div>
         </li>
       </ul>
