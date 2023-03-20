@@ -1,10 +1,13 @@
 @import "../../../styles/variables";
 :host {
-  width: 30%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .box {
-  width: 100%;
-  margin-bottom: 20px;
+  width: 33%;
+  margin-bottom: 10px;
   border: 0.5px solid black;
   border-radius: 5px;
   background-color: $text-color;
@@ -53,25 +56,32 @@
     display: inline-block;
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     :host {
-      width: 70%;
+      width: 100%;
+      .box {
+        width: 33%;
+      }
     }
-
   }
+
   @media only screen and (max-width: 768px) {
     :host {
       width: 100%;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    :host {
-      width: 49%;
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    :host {
-      width: 32%;
+      .box {
+        width: 48%;
+      }
     }
   }
 
+  @media only screen and (max-width: 500px) {
+    :host {
+      width: 100%;
+      .box {
+        width: 100%;
+      }
+      .box-par {
+        font-size: 9px;
+      }
+    }
+  }
