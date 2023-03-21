@@ -1,32 +1,38 @@
-<h1 class="single-book-title">Book Overview-My First Love</h1>
-<div class="single-book">
-  <h2>My first love</h2>
-  <div class="single-book-content">
-    <div class="single-book-img">
-      <img src="../../../../assets/img/money.jpg" />
-    </div>
-    <div class="single-book-text">
-      <p class="single-book-id">BookID:</p>
-      <p class="bold-text">Author Name:<span class="normal-text">2000</span></p>
-      <p>Contry:USA</p>
-      <p>Category:General</p>
-      <p>ISBN:1234567890</p>
-      <p class="single-book-paragraf">
-        Dictum pretium nulla nascetur diam malesuada curabitur lectus fames
-        ornare posuere nec lacus. Parturient metus felis imperdiet! Curae;
-        interdum consectetur nisl parturient aenean. Blandit diam class potenti
-        eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus
-        tincidunt convallis.'
-      </p>
-      <p class="bold-text">Nina Bandzin<span class="normal-text">USA</span></p>
-      <p class="single-book-paragraf">
-        "Fantastic book!I absolutly love this essey collection.Guess I'm into
-        colections right now.i had to read it with tissue in my hand because in
-        manz parts i would tear up from trying to hold my laughter"
-      </p>
+<ng-container *ngFor="let book of books">
+  <div class="single-book-container" [ngSwitch]="book.id">
+    <div class="single-book-box" *ngSwitchCase="bookId">
+      <h1 class="single-book-title">Book Overview-{{ book.title }}</h1>
+      <div class="single-book">
+        <h2>{{ book.title }}</h2>
+        <div class="single-book-content">
+          <div class="single-book-img">
+            <img [alt]="book.alt" [src]="book.src" />
+          </div>
+          <div class="single-book-text">
+            <p class="single-book-id">BookID:{{ bookId }}</p>
+            <p class="bold-text">{{ book.surname }}</p>
+            <p>Contry:USA</p>
+            <p>{{ book.category }}</p>
+            <p>ISBN:1234567890</p>
+            <p class="single-book-paragraf">
+              {{ book.description }}
+            </p>
+            <p class="bold-text">
+              Nina Bandzin<span class="normal-text">USA</span>
+            </p>
+            <p class="single-book-paragraf">
+              "Fantastic book!I absolutly love this essey collection.Guess I'm
+              into colections right now.i had to read it with tissue in my hand
+              because in manz parts i would tear up from trying to hold my
+              laughter"
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</ng-container>
+
 <div class="single-book-button">
   <a routerLink="/" class="book-overview single-book-btn">close</a>
 </div>

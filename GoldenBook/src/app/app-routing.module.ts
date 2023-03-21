@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CentralPartComponent,
   },
   {
-    path: 'book/:bookId',
+    path: 'book/:id',
     component: SinglebookComponent,
   },
   {

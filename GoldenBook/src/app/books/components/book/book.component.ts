@@ -11,6 +11,7 @@ export class BookComponent implements OnInit {
   constructor() {}
   books: Book[] = [
     {
+      id: 'book/1',
       title: 'Money power',
       src: 'assets/img/money.jpg',
       surname: 'Name Surname:1998',
@@ -18,9 +19,9 @@ export class BookComponent implements OnInit {
       alt: 'Money power',
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: '/book/1',
     },
     {
+      id: 'book/2',
       title: 'My First Love',
       src: 'assets/img/my-first-love.jpg',
       surname: 'Name Surname:2000',
@@ -28,9 +29,9 @@ export class BookComponent implements OnInit {
       alt: 'My First Love',
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: '/book/2',
     },
     {
+      id: 'book/3',
       title: 'My Little Life',
       src: 'assets/img/my-little-life.jpg',
       category: 'Category:' + Categories.general,
@@ -38,9 +39,9 @@ export class BookComponent implements OnInit {
       surname: ' Name Surname:2005',
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book/3',
     },
     {
+      id: 'book/4',
       title: 'The Lost Trip',
       src: 'assets/img/the-lost-trip.jpg',
       surname: 'Name Surname:2008',
@@ -48,9 +49,9 @@ export class BookComponent implements OnInit {
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
       category: 'Category:' + Categories.history,
-      overview: './book/4',
     },
     {
+      id: 'book/5',
       title: 'Dark',
       src: 'assets/img/dark.jpg',
       surname: 'Name Surname:2010',
@@ -58,9 +59,9 @@ export class BookComponent implements OnInit {
       category: 'Category:' + Categories.fantasy,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book/5',
     },
     {
+      id: 'book/6',
       title: 'Find Me',
       src: 'assets/img/find-me.jpg',
       surname: 'Name Surname:2021',
@@ -68,7 +69,6 @@ export class BookComponent implements OnInit {
       category: 'Category:' + Categories.fantasy,
       description:
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
-      overview: './book/6',
     },
   ];
 
