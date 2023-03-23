@@ -1,6 +1,6 @@
 <ng-container *ngFor="let book of books">
-  <div class="single-book-container" [ngSwitch]="book.id">
-    <div class="single-book-box" *ngSwitchCase="bookId">
+  <div class="single-book-container" [ngSwitch]="bookId">
+    <div class="single-book-box" *ngSwitchCase="book.id">
       <h1 class="single-book-title">Book Overview-{{ book.title }}</h1>
       <div class="single-book">
         <h2>{{ book.title }}</h2>
