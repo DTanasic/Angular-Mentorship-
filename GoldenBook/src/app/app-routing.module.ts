@@ -1,21 +1,21 @@
-import { SinglebookComponent } from './books/components/singlebook/singlebook.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CentralPartComponent } from './central-part/central-part.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CentralPartComponent,
-  },
-  {
-    path: 'book/:id',
-    component: SinglebookComponent,
+    loadChildren: () =>
+      import('../app/books/books.module').then((module) => module.BooksModule),
   },
   {
     path: 'admin',
     loadChildren: () =>
       import('../app/admin/admin.module').then((module) => module.AdminModule),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 

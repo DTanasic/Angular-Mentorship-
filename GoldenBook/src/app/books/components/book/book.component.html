@@ -1,10 +1,10 @@
-<div class="box" *ngFor="let book of books">
+<div class="box" appBookBackground [category]="book.category">
   <h3>{{ book.title }}</h3>
   <div class="box-inside">
     <div class="box-content">
       <img [alt]="book.alt" [src]="book.src" />
     </div>
-    <div class="box-info">
+    <div class="box-info" appBookBackground [category]="book.category">
       <div class="box-description">
         <p class="book-surname">{{ book.surname }}</p>
         <p>{{ book.category }}</p>

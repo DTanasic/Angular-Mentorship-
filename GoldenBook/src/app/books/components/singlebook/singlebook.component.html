@@ -1,14 +1,18 @@
-<ng-container *ngFor="let book of books">
-  <div class="single-book-container" [ngSwitch]="bookId">
-    <div class="single-book-box" *ngSwitchCase="book.id">
+<ng-container *ngIf="book; else bookNotFound">
+  <div class="single-book-container">
+    <div class="single-book-box">
       <h1 class="single-book-title">Book Overview-{{ book.title }}</h1>
-      <div class="single-book">
+      <div class="single-book" appBookBackground [category]="book.category">
         <h2>{{ book.title }}</h2>
         <div class="single-book-content">
           <div class="single-book-img">
             <img [alt]="book.alt" [src]="book.src" />
           </div>
-          <div class="single-book-text">
+          <div
+            class="single-book-text"
+            appBookBackground
+            [category]="book.category"
+          >
             <p class="single-book-id">BookID:{{ bookId }}</p>
             <p class="bold-text">{{ book.surname }}</p>
             <p>Contry:USA</p>
@@ -36,3 +40,6 @@
 <div class="single-book-button">
   <a routerLink="/" class="book-overview single-book-btn">close</a>
 </div>
+<ng-template #bookNotFound>
+  <app-headline text="Book not found"></app-headline>
+</ng-template>

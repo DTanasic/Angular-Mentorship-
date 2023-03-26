@@ -1,3 +1,5 @@
+import { AdminLink } from './../../interfaces/admin-link.interface';
+import { Category } from '../../interfaces/category.interface';
 import { Admin } from './../../../model/enum/admin.enum';
 import { Component, OnInit } from '@angular/core';
 import { Categories } from 'src/app/model/enum/categories.enum';
@@ -11,13 +13,34 @@ export class SidebarComponent implements OnInit {
   adminValue: boolean = false;
   category: boolean = false;
   showFiller = false;
-  categoriesList: string[] = [
-    Categories.general,
-    Categories.history,
-    Categories.fantasy,
-    Categories.literary,
+  categoriesList: Category[] = [
+    {
+      id: 1,
+      name: Categories.general,
+    },
+    {
+      id: 2,
+      name: Categories.history,
+    },
+    {
+      id: 3,
+      name: Categories.fantasy,
+    },
+    {
+      id: 4,
+      name: Categories.literary,
+    },
   ];
-  adminList: string[] = [Admin.books, Admin.categories];
+  adminList: AdminLink[] = [
+    {
+      linkName: Admin.books,
+      path: 'book',
+    },
+    {
+      linkName: Admin.categories,
+      path: 'category',
+    },
+  ];
   constructor() {}
 
   ngOnInit(): void {}

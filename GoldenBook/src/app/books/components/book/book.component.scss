@@ -1,12 +1,8 @@
 @import "../../../styles/variables";
 :host {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 33%;
 }
 .box {
-  width: 33%;
   margin-bottom: 10px;
   border: 0.5px solid black;
   border-radius: 5px;
