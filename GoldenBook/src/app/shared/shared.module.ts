@@ -1,3 +1,4 @@
+import { HighlighterDirective } from './directives/highlighter/highlighter.directive';
 import { FilterComponent } from './filter/filter.component';
 import { SearchComponent } from './search/search.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -7,7 +8,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
-  declarations: [SearchComponent, FilterComponent, PaginationComponent],
+  declarations: [
+    SearchComponent,
+    FilterComponent,
+    PaginationComponent,
+    HighlighterDirective,
+  ],
   imports: [
     CommonModule,
     MatPaginatorModule,
@@ -21,6 +27,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatPaginatorModule,
     MatSelectModule,
     MatCheckboxModule,
+    HighlighterDirective,
   ],
 })
 export class SharedModule {}

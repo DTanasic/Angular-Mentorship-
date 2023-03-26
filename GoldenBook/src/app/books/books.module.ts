@@ -1,3 +1,4 @@
+import { HighlighterDirective } from './../shared/directives/highlighter/highlighter.directive';
 import { AppRoutingModule } from './../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from './../core/core.module';

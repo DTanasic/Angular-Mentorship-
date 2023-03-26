@@ -11,7 +11,7 @@ export class BookComponent implements OnInit {
   constructor() {}
   books: Book[] = [
     {
-      id: 'book/1',
+      id: '1',
       title: 'Money power',
       src: 'assets/img/money.jpg',
       surname: 'Name Surname:1998',
@@ -21,7 +21,7 @@ export class BookComponent implements OnInit {
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
     },
     {
-      id: 'book/2',
+      id: '2',
       title: 'My First Love',
       src: 'assets/img/my-first-love.jpg',
       surname: 'Name Surname:2000',
@@ -31,7 +31,7 @@ export class BookComponent implements OnInit {
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
     },
     {
-      id: 'book/3',
+      id: '3',
       title: 'My Little Life',
       src: 'assets/img/my-little-life.jpg',
       category: 'Category:' + Categories.general,
@@ -41,7 +41,7 @@ export class BookComponent implements OnInit {
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
     },
     {
-      id: 'book/4',
+      id: '4',
       title: 'The Lost Trip',
       src: 'assets/img/the-lost-trip.jpg',
       surname: 'Name Surname:2008',
@@ -51,7 +51,7 @@ export class BookComponent implements OnInit {
       category: 'Category:' + Categories.history,
     },
     {
-      id: 'book/5',
+      id: '5',
       title: 'Dark',
       src: 'assets/img/dark.jpg',
       surname: 'Name Surname:2010',
@@ -61,7 +61,7 @@ export class BookComponent implements OnInit {
         'Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.',
     },
     {
-      id: 'book/6',
+      id: '6',
       title: 'Find Me',
       src: 'assets/img/find-me.jpg',
       surname: 'Name Surname:2021',
