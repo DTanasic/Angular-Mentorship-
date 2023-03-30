@@ -1,0 +1,23 @@
+<div class="task">
+  <p>Task 1</p>
+  <button (click)="Task1Start()">Start</button>
+  {{ currentTime$ | async }}
+</div>
+
+<div class="task">
+  <p>Task 2</p>
+  <input type="text" id="input" placeholder="Task 2" />
+  {{ searchInput$ | async }}
+</div>
+
+<div class="task">
+  <p>Task 3</p>
+  <input type="text" id="input1" placeholder="Task 3" />
+  <input type="text" id="input2" placeholder="Task 3" />
+  {{ result$ | async }}
+</div>
+
+<div class="task">
+  <p>Task 4</p>
+  {{ combinedResault$ | async }}
+</div>
