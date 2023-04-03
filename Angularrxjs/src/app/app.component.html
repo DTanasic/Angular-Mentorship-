@@ -19,5 +19,22 @@
 
 <div class="task">
   <p>Task 4</p>
-  {{ combinedResault$ | async }}
+</div>
+
+<div class="task">
+  <p>Task 5</p>
+  <input type="text" id="input11" placeholder="Task 5" />
+  <input type="text" id="input22" placeholder="Task 5" />
+  {{ result1$ | async }}
+</div>
+
+<div class="task">
+  <p>Task 6</p>
+</div>
+
+<div class="tast">
+  <p>Task 7</p>
+  <button (click)="startTimer()">Start</button>
+  <button (click)="stopTimer()">Stop</button>
+  <p>{{ timer$ | async }}</p>
 </div>
