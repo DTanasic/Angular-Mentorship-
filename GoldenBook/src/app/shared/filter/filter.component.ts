@@ -1,23 +1,36 @@
-import { Categories } from '../../model/enum/categories.enum';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CategoriesModel } from 'src/app/model/interfaces/categories.model';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  OnDestroy,
+} from '@angular/core';
+import { Subject } from 'rxjs';
+import { CategoriesService } from 'src/app/books/services/categories.service';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent implements OnInit, OnDestroy {
   @Output() displayValue = new EventEmitter<string>();
-  categoriesList: string[] = [
-    Categories.general,
-    Categories.history,
-    Categories.fantasy,
-    Categories.literary,
-  ];
-  constructor() {}
+  categories: CategoriesModel[] = [];
+  unsubscirebe$: Subject<void> = new Subject<void>();
+  constructor(private categorieService: CategoriesService) {}
   displayOption: string = '';
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categorieService.getAllCategories().subscribe((data) => {
+      this.categories = data;
+      console.log(data);
+    });
+  }
+  ngOnDestroy() {
+    this.unsubscirebe$?.next();
+    this.unsubscirebe$?.complete();
+  }
 
   onClick() {
     console.log(this.displayOption);
