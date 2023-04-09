@@ -54,23 +54,23 @@
 
   @media only screen and (max-width: 1024px) {
     :host {
-      width: 100%;
+      width: 48%;
       .box {
-        width: 33%;
+        width: 100%;
       }
     }
   }
 
   @media only screen and (max-width: 768px) {
     :host {
-      width: 100%;
+      width: 48%;
       .box {
-        width: 48%;
+        width: 100%;
       }
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     :host {
       width: 100%;
       .box {

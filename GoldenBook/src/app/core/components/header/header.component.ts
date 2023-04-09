@@ -1,3 +1,4 @@
+import { SidebarService } from './../../services/sidebar.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -6,9 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() visibleValue = new EventEmitter<boolean>();
-
-  constructor() {}
+  constructor(private sidebarService: SidebarService) {}
 
   visible: boolean = false;
 
@@ -16,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   hamburgerClicked(): void {
     this.visible = !this.visible;
-    this.visibleValue.emit(this.visible);
-    console.log(this.visible);
+    this.sidebarService.togleSideNav$.next(this.visible);
   }
 }

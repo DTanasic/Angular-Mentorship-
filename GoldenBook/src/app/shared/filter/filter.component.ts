@@ -1,4 +1,3 @@
-import { CategoriesModel } from 'src/app/model/interfaces/categories.model';
 import {
   Component,
   OnInit,
@@ -6,8 +5,9 @@ import {
   EventEmitter,
   OnDestroy,
 } from '@angular/core';
-import { Subject } from 'rxjs';
-import { CategoriesService } from 'src/app/books/services/categories.service';
+import { Subject, takeUntil } from 'rxjs';
+import { Categories } from 'src/app/model/enum/categories.enum';
+import { CategoryService } from 'src/app/books/services/category.service';
 
 @Component({
   selector: 'app-filter',
@@ -16,20 +16,27 @@ import { CategoriesService } from 'src/app/books/services/categories.service';
 })
 export class FilterComponent implements OnInit, OnDestroy {
   @Output() displayValue = new EventEmitter<string>();
-  categories: CategoriesModel[] = [];
-  unsubscirebe$: Subject<void> = new Subject<void>();
-  constructor(private categorieService: CategoriesService) {}
+  categoriesFilter: Categories[] = [];
+  private unsubscirebe$: Subject<void> = new Subject<void>();
+  constructor(private categoryService: CategoryService) {}
   displayOption: string = '';
 
   ngOnInit(): void {
-    this.categorieService.getAllCategories().subscribe((data) => {
-      this.categories = data;
-      console.log(data);
-    });
+    this.getAllCategories();
+  }
+  unsubscribeAll() {
+    this.unsubscirebe$.next();
+    this.unsubscirebe$.complete();
   }
   ngOnDestroy() {
-    this.unsubscirebe$?.next();
-    this.unsubscirebe$?.complete();
+    this.unsubscribeAll();
+  }
+
+  private getAllCategories(): void {
+    this.categoryService
+      .getAll()
+      .pipe(takeUntil(this.unsubscirebe$))
+      .subscribe((data: Categories[]) => (this.categoriesFilter = data));
   }
 
   onClick() {
