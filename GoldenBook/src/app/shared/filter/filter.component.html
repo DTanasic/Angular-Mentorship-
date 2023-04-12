@@ -4,8 +4,8 @@
     placeholder="Filter by Category"
     multiple
   >
-    <ng-container *ngFor="let categorie of categoriesFilter">
-      <mat-option>{{ categorie }}</mat-option>
+    <ng-container *ngFor="let category of categories">
+      <mat-option>{{ category.name }}</mat-option>
     </ng-container>
   </mat-select>
 </mat-form-field>

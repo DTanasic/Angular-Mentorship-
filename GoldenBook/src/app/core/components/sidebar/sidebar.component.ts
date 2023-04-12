@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categories } from 'src/app/model/enum/categories.enum';
 import { Subject, takeUntil } from 'rxjs';
 import { CategoryService } from 'src/app/books/services/category.service';
+import { Category } from '../../interfaces/category.interface';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +15,7 @@ import { CategoryService } from 'src/app/books/services/category.service';
 export class SidebarComponent implements OnInit {
   adminTab: boolean = false;
   categoryTab: boolean = false;
-  categories: Categories[] = [];
+  categories: Category[] = [];
   unsubscribe$: Subject<void> = new Subject();
   isVisible: boolean = false;
   showFiller = false;
@@ -39,11 +40,13 @@ export class SidebarComponent implements OnInit {
     this.unsubscribe$.complete();
   }
 
-  private getAllCategories(): void {
+  getAllCategories() {
     this.categoryService
       .getAll()
       .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((data: Categories[]) => (this.categories = data));
+      .subscribe((categories) => {
+        this.categories = categories;
+      });
   }
 
   onToggle() {

@@ -6,7 +6,7 @@ import { SinglebookComponent } from './components/singlebook/singlebook.componen
 const routes: Routes = [
   { path: '', component: CentralPartComponent },
   {
-    path: 'book/:id',
+    path: 'books/:id',
     component: SinglebookComponent,
   },
 ];

@@ -10,6 +10,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CentralPartComponent } from './components/central-part/central-part.component';
 import { BookBackgroundDirective } from './components/directives/book-background.directive';
+import { BookService } from './services/book.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { BookBackgroundDirective } from './components/directives/book-background
     BookBackgroundDirective,
     SinglebookComponent,
   ],
-  imports: [CommonModule, BooksRoutingModule, SharedModule],
+  imports: [CommonModule, BooksRoutingModule, SharedModule, HttpClientModule],
   exports: [CentralPartComponent],
+  providers: [BookService],
 })
 export class BooksModule {}

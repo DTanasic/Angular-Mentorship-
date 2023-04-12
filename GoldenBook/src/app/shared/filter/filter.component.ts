@@ -6,8 +6,8 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { Categories } from 'src/app/model/enum/categories.enum';
 import { CategoryService } from 'src/app/books/services/category.service';
+import { Category } from 'src/app/core/interfaces/category.interface';
 
 @Component({
   selector: 'app-filter',
@@ -16,7 +16,7 @@ import { CategoryService } from 'src/app/books/services/category.service';
 })
 export class FilterComponent implements OnInit, OnDestroy {
   @Output() displayValue = new EventEmitter<string>();
-  categoriesFilter: Categories[] = [];
+  categories: Category[] = [];
   private unsubscirebe$: Subject<void> = new Subject<void>();
   constructor(private categoryService: CategoryService) {}
   displayOption: string = '';
@@ -36,7 +36,9 @@ export class FilterComponent implements OnInit, OnDestroy {
     this.categoryService
       .getAll()
       .pipe(takeUntil(this.unsubscirebe$))
-      .subscribe((data: Categories[]) => (this.categoriesFilter = data));
+      .subscribe((categories) => {
+        this.categories = categories;
+      });
   }
 
   onClick() {

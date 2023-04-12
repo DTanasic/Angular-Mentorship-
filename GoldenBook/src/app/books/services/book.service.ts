@@ -1,23 +1,30 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, of } from 'rxjs';
-import { books } from 'src/app/fake-data/books-fake';
 import { Book } from 'src/app/model/interfaces/book.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookService {
-  private books: Book[] = books;
-  constructor() {}
+  constructor(private httpClientSevice: HttpClient) {}
 
   getAll(): Observable<Book[]> {
-    return of(this.books);
+    return this.httpClientSevice.get<Book[]>(
+      `${environment.baseApiUrl}books?deletedAt=null`
+    );
   }
 
-  getById(id: number): Observable<Book | undefined> {
-    const book = of(this.books).pipe(
-      map((books) => books.find((book) => book.id === id))
+  getSingleBook(id: number): Observable<Book> {
+    return this.httpClientSevice.get<Book>(
+      `${environment.baseApiUrl}books/${id}`
     );
-    return book;
+  }
+
+  delete(book: Book): Observable<any> {
+    return this.httpClientSevice.delete(
+      `${environment.baseApiUrl}books/${book.id}`
+    );
   }
 }

@@ -1,5 +1,5 @@
 import { BookService } from './../../services/book.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { Book } from 'src/app/model/interfaces/book.model';
@@ -9,9 +9,9 @@ import { Book } from 'src/app/model/interfaces/book.model';
   templateUrl: './singlebook.component.html',
   styleUrls: ['./singlebook.component.scss'],
 })
-export class SinglebookComponent implements OnInit {
-  bookId: string | null = '';
-  book?: Book | undefined;
+export class SinglebookComponent implements OnInit, OnDestroy {
+  bookId: number | undefined;
+  book?: Book;
   private unsubscribe$: Subject<void> = new Subject();
   constructor(
     private activatedRouter: ActivatedRoute,
@@ -21,14 +21,20 @@ export class SinglebookComponent implements OnInit {
   ngOnInit(): void {
     this.getBookbyId();
   }
-
   getBookbyId() {
     let bookId: number = Number(
       this.activatedRouter.snapshot.paramMap.get('id')
     );
     this.bookService
-      .getById(bookId)
+      .getSingleBook(bookId)
       .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((book) => (this.book = book));
+      .subscribe((book) => {
+        this.book = book;
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

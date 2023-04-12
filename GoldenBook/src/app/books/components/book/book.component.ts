@@ -1,5 +1,7 @@
-import { Book } from '../../../model/interfaces/book.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { BookService } from './../../services/book.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Category } from 'src/app/core/interfaces/category.interface';
+import { Book } from 'src/app/model/interfaces/book.model';
 
 @Component({
   selector: 'app-book',
@@ -8,7 +10,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BookComponent implements OnInit {
   @Input() book!: Book;
-  constructor() {}
+  @Input() categories!: Category;
+  @Output() deleteBook = new EventEmitter();
+  constructor(private BookService: BookService) {}
 
   ngOnInit(): void {}
+
+  onDelete() {
+    this.deleteBook.emit();
+  }
 }

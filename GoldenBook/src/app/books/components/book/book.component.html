@@ -13,10 +13,11 @@
         </div>
       </div>
       <div class="book-button">
-        <a class="book-overview" [routerLink]="['/book', book.id]"
+        <a class="book-overview" [routerLink]="['/books', book.id]"
           >BOOK OVERVIEW</a
         >
       </div>
+      <button class="book-overview" (click)="onDelete()">Delete Book</button>`
     </div>
   </div>
 </div>

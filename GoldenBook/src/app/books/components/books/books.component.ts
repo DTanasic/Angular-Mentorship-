@@ -1,7 +1,8 @@
-import { OnInit, OnDestroy, Component } from '@angular/core';
-import { Book } from '../../../model/interfaces/book.model';
-import { Subject, takeUntil } from 'rxjs';
+import { OnInit, Component, OnDestroy } from '@angular/core';
 import { BookService } from '../../services/book.service';
+import { Subject, takeUntil } from 'rxjs';
+import { Book } from 'src/app/model/interfaces/book.model';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-books',
@@ -10,28 +11,38 @@ import { BookService } from '../../services/book.service';
 })
 export class BooksComponent implements OnInit, OnDestroy {
   books: Book[] = [];
-
-  unsubscirebe$: Subject<void> = new Subject<void>();
-
+  private unsubscribe$ = new Subject<void>();
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
     this.getAllBooks();
   }
-
-  unsubscribeAll() {
-    this.unsubscirebe$.next();
-    this.unsubscirebe$.complete();
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
-  ngOnDestroy() {
-    this.unsubscribeAll();
-  }
-
-  private getAllBooks() {
+  getAllBooks() {
     this.bookService
       .getAll()
-      .pipe(takeUntil(this.unsubscirebe$))
-      .subscribe((data: Book[]) => (this.books = data));
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((books) => {
+        this.books = books;
+      });
+  }
+
+  deleteBook(book: Book) {
+    this.bookService
+      .delete(book)
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((data) => {
+        console.log(data);
+        this.bookService
+          .getAll()
+          .pipe(takeUntil(this.unsubscribe$))
+          .subscribe((books) => {
+            this.books = books;
+          });
+      });
   }
 }

@@ -28,7 +28,7 @@
                 class="categories-sidebar"
                 *ngFor="let category of categories"
               >
-                <a [routerLink]="['/category']">{{ category }}</a>
+                <a [routerLink]="['/category']">{{ category.name }}</a>
               </li>
             </ul>
           </div>
