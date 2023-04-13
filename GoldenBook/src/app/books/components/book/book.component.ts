@@ -8,15 +8,18 @@ import { Book } from 'src/app/model/interfaces/book.model';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss'],
 })
-export class BookComponent implements OnInit {
+export class BookComponent {
   @Input() book!: Book;
   @Input() categories!: Category;
   @Output() deleteBook = new EventEmitter();
+  @Output() softDelete = new EventEmitter();
   constructor(private BookService: BookService) {}
-
-  ngOnInit(): void {}
 
   onDelete() {
     this.deleteBook.emit();
+  }
+
+  SoftDelete() {
+    this.softDelete.emit();
   }
 }

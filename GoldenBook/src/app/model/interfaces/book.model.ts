@@ -6,4 +6,5 @@ export interface Book {
   surname: string;
   category: string;
   description: string;
+  deletedAt: string;
 }

@@ -1,6 +1,6 @@
 import { OnInit, Component, OnDestroy } from '@angular/core';
 import { BookService } from '../../services/book.service';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, take, takeUntil } from 'rxjs';
 import { Book } from 'src/app/model/interfaces/book.model';
 import { CategoryService } from '../../services/category.service';
 
@@ -24,8 +24,8 @@ export class BooksComponent implements OnInit, OnDestroy {
 
   getAllBooks() {
     this.bookService
-      .getAll()
-      .pipe(takeUntil(this.unsubscribe$))
+      .getAllActiveBooks()
+      .pipe(take(1))
       .subscribe((books) => {
         this.books = books;
       });
@@ -34,11 +34,26 @@ export class BooksComponent implements OnInit, OnDestroy {
   deleteBook(book: Book) {
     this.bookService
       .delete(book)
-      .pipe(takeUntil(this.unsubscribe$))
+      .pipe(take(1))
       .subscribe((data) => {
         console.log(data);
         this.bookService
-          .getAll()
+          .getAllActiveBooks()
+          .pipe(takeUntil(this.unsubscribe$))
+          .subscribe((books) => {
+            this.books = books;
+          });
+      });
+  }
+
+  softDelete(book: Book) {
+    this.bookService
+      .softDelete(book)
+      .pipe(take(1))
+      .subscribe((data) => {
+        console.log(data, 'deletedSoft');
+        this.bookService
+          .getAllActiveBooks()
           .pipe(takeUntil(this.unsubscribe$))
           .subscribe((books) => {
             this.books = books;
