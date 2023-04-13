@@ -1,5 +1,16 @@
 {
-  "books": [
+  "books":[
+    {
+      "id": 1,
+      "title": "Money power",
+      "src": "assets/img/money.jpg",
+      "surname": "Name Surname:1998",
+      "category": "Category:",
+      "alt": "Money power",
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+        "deletedAt":"null"
+      },
     {
       "id": 2,
       "title": "My First Love",
@@ -7,38 +18,42 @@
       "surname": "Name Surname:2000",
       "category": "Category:",
       "alt": "My First Love",
-      "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
-      "deletedAt": "null"
-    },
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+      "deletedAt":"null"
+      },
     {
       "id": 3,
       "title": "My Little Life",
       "src": "assets/img/my-little-life.jpg",
-      "category": "Category:",
-      "alt": "My Little Life",
+      "category":"Category:",
+      "alt":"My Little Life",
       "surname": "Name Surname:2005",
-      "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
-      "deletedAt": "null"
-    },
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+      "deletedAt":"null"
+      },
     {
       "id": 4,
-      "title": "The Lost Trip",
+      "title":"The Lost Trip",
       "src": "assets/img/the-lost-trip.jpg",
       "surname": "Name Surname:2008",
       "alt": "The Lost Trip",
-      "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
-      "category": "Category:",
-      "deletedAt": "null"
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+      "category" :"Category:",
+      "deletedAt":"null"
     },
     {
       "id": 5,
       "title": "Dark",
       "src": "assets/img/dark.jpg",
       "surname": "Name Surname:2010",
-      "alt": "Dark",
+      "alt":"Dark",
       "category": "Category",
-      "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
-      "deletedAt": "null"
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+        "deletedAt":"null"
     },
     {
       "id": 6,
@@ -47,22 +62,28 @@
       "surname": "Name Surname:2021",
       "alt": "Find Me",
       "category": "Category:",
-      "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
-      "deletedAt": "null"
+      "description":
+        "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
+        "deletedAt":"null"
     }
   ],
-  "categories": [
+
+  "categories":[
     {
-      "name": "General"
+      "name":"General"
     },
     {
-      "name": "Fantasy"
+      "name":"Fantasy"
     },
     {
-      "name": "History"
+      "name":"History"
     },
     {
-      "name": "Literary"
+      "name":"Literary"
     }
   ]
 }
+
+
+
+
