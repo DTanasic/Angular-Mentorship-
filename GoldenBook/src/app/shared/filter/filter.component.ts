@@ -24,7 +24,7 @@ export class FilterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getAllCategories();
   }
-  unsubscribeAll() {
+  private unsubscribeAll() {
     this.unsubscirebe$.next();
     this.unsubscirebe$.complete();
   }
