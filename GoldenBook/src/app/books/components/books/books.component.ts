@@ -10,8 +10,10 @@ import { CategoryService } from '../../services/category.service';
   styleUrls: ['./books.component.scss'],
 })
 export class BooksComponent implements OnInit, OnDestroy {
-  books: Book[] = [];
+  public books: Book[] = [];
+
   private unsubscribe$ = new Subject<void>();
+
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
@@ -22,7 +24,7 @@ export class BooksComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  getAllBooks() {
+  private getAllBooks() {
     this.bookService
       .getAllActiveBooks()
       .pipe(take(1))
