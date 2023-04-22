@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     SinglebookComponent,
   ],
   imports: [CommonModule, BooksRoutingModule, SharedModule, HttpClientModule],
-  exports: [CentralPartComponent],
+  exports: [],
   providers: [BookService],
 })
 export class BooksModule {}

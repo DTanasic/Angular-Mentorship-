@@ -13,7 +13,7 @@ export class BookBackgroundDirective {
   ngOnInit(): void {
     const categotyName = this.category?.replace('Category:', '');
     switch (categotyName) {
-      case Categories.general:
+      case 'General':
         this.elementRef.nativeElement.style.backgroundColor = '';
         this.elementRef.nativeElement.style.color = '';
         break;
