@@ -13,6 +13,7 @@ export class BookComponent {
   @Input() categories!: Category;
   @Output() deleteBook = new EventEmitter();
   @Output() softDelete = new EventEmitter();
+
   constructor(private BookService: BookService) {}
 
   onDelete() {
