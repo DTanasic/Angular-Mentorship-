@@ -13,7 +13,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick(): void {
-    console.log(this.search);
     this.displaySearch.emit(this.search);
   }
 
