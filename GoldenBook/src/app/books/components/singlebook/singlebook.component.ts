@@ -12,7 +12,9 @@ import { Book } from 'src/app/model/interfaces/book.model';
 export class SinglebookComponent implements OnInit, OnDestroy {
   bookId: number | undefined;
   book?: Book;
+
   private unsubscribe$: Subject<void> = new Subject();
+
   constructor(
     private activatedRouter: ActivatedRoute,
     private bookService: BookService
