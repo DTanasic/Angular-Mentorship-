@@ -16,20 +16,24 @@ import { Category } from 'src/app/core/interfaces/category.interface';
 })
 export class FilterComponent implements OnInit, OnDestroy {
   @Output() displayValue = new EventEmitter<string>();
-  categories: Category[] = [];
+
+  public categories: Category[] = [];
+  public displayOption: string = '';
+
   private unsubscirebe$: Subject<void> = new Subject<void>();
   constructor(private categoryService: CategoryService) {}
-  displayOption: string = '';
 
   ngOnInit(): void {
     this.getAllCategories();
   }
+
+  ngOnDestroy() {
+    this.unsubscribeAll();
+  }
+
   private unsubscribeAll() {
     this.unsubscirebe$.next();
     this.unsubscirebe$.complete();
-  }
-  ngOnDestroy() {
-    this.unsubscribeAll();
   }
 
   private getAllCategories(): void {
