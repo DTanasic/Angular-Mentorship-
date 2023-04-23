@@ -7,8 +7,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   @Output() displaySearch = new EventEmitter<string>();
+  defaultValue = '';
   public search = '';
-  constructor() {}
+
+  constructor() {
+    const filter = localStorage.getItem('filter');
+    if (filter) {
+      const stringToObj = JSON.parse(filter);
+      this.defaultValue = stringToObj.searchValue;
+    }
+  }
 
   ngOnInit(): void {}
 

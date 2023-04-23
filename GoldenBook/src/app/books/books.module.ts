@@ -12,6 +12,8 @@ import { CentralPartComponent } from './components/central-part/central-part.com
 import { BookBackgroundDirective } from './components/directives/book-background.directive';
 import { BookService } from './services/book.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SafeFiltersComponent } from './components/safe-filters/safe-filters.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
     CentralPartComponent,
     BookBackgroundDirective,
     SinglebookComponent,
+    SafeFiltersComponent,
   ],
-  imports: [CommonModule, BooksRoutingModule, SharedModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    BooksRoutingModule,
+    SharedModule,
+    HttpClientModule,
+    MatDialogModule,
+  ],
   exports: [],
   providers: [BookService],
 })

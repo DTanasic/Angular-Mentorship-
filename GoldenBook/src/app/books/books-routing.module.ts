@@ -1,10 +1,15 @@
 import { NgModule, Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanDeactivate } from '@angular/router';
 import { CentralPartComponent } from './components/central-part/central-part.component';
 import { SinglebookComponent } from './components/singlebook/singlebook.component';
+import { SafeFilterGuard } from './guards/safe-filter.guard';
 
 const routes: Routes = [
-  { path: '', component: CentralPartComponent },
+  {
+    path: '',
+    component: CentralPartComponent,
+    canDeactivate: [SafeFilterGuard],
+  },
   {
     path: 'books/:id',
     component: SinglebookComponent,

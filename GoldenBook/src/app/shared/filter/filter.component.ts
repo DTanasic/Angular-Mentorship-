@@ -5,6 +5,7 @@ import {
   EventEmitter,
   OnDestroy,
 } from '@angular/core';
+import { MatSelectChange } from '@angular/material/select';
 import { Subject, takeUntil } from 'rxjs';
 import { CategoryService } from 'src/app/books/services/category.service';
 import { Category } from 'src/app/core/interfaces/category.interface';
@@ -15,13 +16,20 @@ import { Category } from 'src/app/core/interfaces/category.interface';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit, OnDestroy {
-  @Output() displayValue = new EventEmitter<string>();
+  @Output() categorySelected = new EventEmitter<string>();
 
+  public defaultValue: string = '';
   public categories: Category[] = [];
-  public displayOption: string = '';
 
   private unsubscirebe$: Subject<void> = new Subject<void>();
-  constructor(private categoryService: CategoryService) {}
+
+  constructor(private categoryService: CategoryService) {
+    const filter = localStorage.getItem('filter');
+    if (filter) {
+      const stringToObj = JSON.parse(filter);
+      this.defaultValue = stringToObj.categoryName;
+    }
+  }
 
   ngOnInit(): void {
     this.getAllCategories();
@@ -45,12 +53,7 @@ export class FilterComponent implements OnInit, OnDestroy {
       });
   }
 
-  onClick() {
-    console.log(this.displayOption);
-    this.displayValue.emit(this.displayOption);
-  }
-
-  getOptionValue(event: any): void {
-    this.displayOption = event.target.value;
+  getOptionValue(event: MatSelectChange) {
+    this.categorySelected.emit(event.value.join(','));
   }
 }

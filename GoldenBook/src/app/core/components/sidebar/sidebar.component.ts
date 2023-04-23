@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit {
   adminList: AdminLink[] = [
     {
       linkName: Admin.books,
-      path: 'book',
+      path: 'book-list',
     },
     {
       linkName: Admin.categories,

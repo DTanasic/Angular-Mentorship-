@@ -4,10 +4,8 @@
     <app-headline text="Homepage"></app-headline>
     <div class="inputs">
       <app-search (displaySearch)="showValue($event)"></app-search>
-      <app-filter (displayValue)="showOption($event)"></app-filter>
+      <app-filter (categorySelected)="showOption($event)"></app-filter>
     </div>
-    <p class="display-message">{{ displaySearch }}</p>
-    <p class="display-message">{{ displayValue }}</p>
   </div>
   <!---body of the books part of the site-->
   <app-books></app-books>

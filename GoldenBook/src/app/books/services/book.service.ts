@@ -16,6 +16,10 @@ export class BookService {
       .pipe(map((books) => books.filter((book) => book.deletedAt === null)));
   }
 
+  getAllBooks(): Observable<Book[]> {
+    return this.httpClientSevice.get<Book[]>(`${environment.baseApiUrl}books`);
+  }
+
   getSingleBook(id: number): Observable<Book> {
     return this.httpClientSevice.get<Book>(
       `${environment.baseApiUrl}books/${id}`

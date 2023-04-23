@@ -1,11 +1,13 @@
-<mat-form-field (click)="onClick()" class="filter" appearance="fill">
+<mat-form-field class="filter" appearance="fill">
   <mat-select
-    (change)="getOptionValue($event)"
+    (selectionChange)="getOptionValue($event)"
     placeholder="Filter by Category"
     multiple
+    [value]="defaultValue"
   >
-    <ng-container *ngFor="let category of categories">
-      <mat-option>{{ category.name }}</mat-option>
-    </ng-container>
+    <mat-option disabled selected>Pick category</mat-option>
+    <mat-option *ngFor="let category of categories" [value]="category.name">{{
+      category.name
+    }}</mat-option>
   </mat-select>
 </mat-form-field>
