@@ -11,8 +11,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
+import { LoginComponent } from './components/login/login.component';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SidebarComponent],
+  declarations: [
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent,
+    LoginComponent,
+  ],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -23,6 +30,7 @@ import { AppRoutingModule } from '../app-routing.module';
     MatMenuModule,
     RouterModule,
     AppRoutingModule,
+    MatCardModule,
   ],
   exports: [FooterComponent, HeaderComponent, SidebarComponent],
 })

@@ -3,6 +3,7 @@ import { RouterModule, Routes, CanDeactivate } from '@angular/router';
 import { CentralPartComponent } from './components/central-part/central-part.component';
 import { SinglebookComponent } from './components/singlebook/singlebook.component';
 import { SafeFilterGuard } from './guards/safe-filter.guard';
+import { ConfirmDeactivateGuardGuard } from './guards/confirm-deactivate-guard.guard';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
   {
     path: 'books/:id',
     component: SinglebookComponent,
+    canDeactivate: [ConfirmDeactivateGuardGuard],
   },
 ];
 
