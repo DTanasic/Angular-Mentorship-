@@ -114,5 +114,25 @@
       "id":4,
       "name": "Literary"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Pera",
+      "lastName": "Peric",
+      "email": "peraperic@gmail.com",
+      "password": "123456789",
+      "country": "Serbia",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "firstName": "Marko",
+      "lastName": "Markovic",
+      "email": "markomarkovic@gmail.com",
+      "password": "11112222",
+      "country": "Serbia",
+      "role": "admin"
+    }
   ]
 }

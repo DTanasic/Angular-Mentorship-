@@ -15,19 +15,5 @@ export class AppComponent {
   unsubscribe$: Subject<void> = new Subject();
 
   constructor(private sidebarService: SidebarService) {}
-  ngOnInit(): void {
-    this.toggleVisable();
-  }
-
-  unsubscribeAll(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
-  }
-
-  private toggleVisable(): void {
-    this.sidebarService.togleSideNav$
-      .asObservable()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((value) => (this.isVisible = value));
-  }
+  ngOnInit(): void {}
 }

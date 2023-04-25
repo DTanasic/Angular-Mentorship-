@@ -13,12 +13,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
+import { InitialPageComponent } from './components/initial-page/initial-page.component';
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     SidebarComponent,
     LoginComponent,
+    InitialPageComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,11 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     MatCardModule,
   ],
-  exports: [FooterComponent, HeaderComponent, SidebarComponent],
+  exports: [
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent,
+    InitialPageComponent,
+  ],
 })
 export class CoreModule {}

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, of } from 'rxjs';
 import { Book } from 'src/app/model/interfaces/book.model';
@@ -23,6 +23,17 @@ export class BookService {
   getSingleBook(id: number): Observable<Book> {
     return this.httpClientSevice.get<Book>(
       `${environment.baseApiUrl}books/${id}`
+    );
+  }
+
+  getSingeBookById(id: number): Observable<Book> {
+    return this.httpClientSevice.get<Book>(
+      `${environment.baseApiUrl}books/${id}`,
+      {
+        headers: new HttpHeaders({
+          PageName: 'BookOverview',
+        }),
+      }
     );
   }
 

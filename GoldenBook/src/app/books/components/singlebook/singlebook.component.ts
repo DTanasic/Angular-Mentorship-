@@ -28,7 +28,7 @@ export class SinglebookComponent implements OnInit, OnDestroy {
       this.activatedRouter.snapshot.paramMap.get('id')
     );
     this.bookService
-      .getSingleBook(bookId)
+      .getSingeBookById(bookId)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((book) => {
         this.book = book;
