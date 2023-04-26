@@ -1,0 +1,17 @@
+@import "../../../../styles/variables.scss";
+
+.mat-table,.mat-paginator {
+  width: 1000px;
+  background-color:$text-color ;
+  }
+  .booktable-button {
+    margin:  25px 50px;
+    letter-spacing:2px;
+    padding: 3px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: gray;
+    color:$text-color;
+    display: inline-block;
+  }

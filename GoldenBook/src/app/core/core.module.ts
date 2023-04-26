@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MatCardModule,
     FormsModule,
+    MatTooltipModule,
   ],
   exports: [
     FooterComponent,

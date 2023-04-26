@@ -1,0 +1,12 @@
+@import "../../book-table/book-table.component.scss";
+
+
+::ng-deep {
+  .mat-dialog-container {
+    background-color: $text-color;
+  }
+}
+
+
+
+
