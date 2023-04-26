@@ -17,4 +17,9 @@ export class HeaderComponent implements OnInit {
     this.visible = !this.visible;
     this.sidebarService.togleSideNav$.next(this.visible);
   }
+
+  deleteData() {
+    localStorage.clear();
+    location.reload();
+  }
 }

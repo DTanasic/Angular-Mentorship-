@@ -1,16 +1,28 @@
 <div class="login">
   <mat-card class="login-card">
     <h3>Log in</h3>
-    <mat-form-field appearance="outline">
-      <div class="login-input">
-        <p>Login</p>
-        <input matInput placeholder="Login" />
+    <form (ngSubmit)="loginUser()">
+      <div>
+        <label for="email"> Email </label>
+        <input
+          class="login-input"
+          type="email"
+          placeholder="email"
+          name="email"
+          [(ngModel)]="form.email"
+        />
       </div>
-      <div class="login-input">
-        <p>Password</p>
-        <input matInput placeholder="Password" />
+      <div>
+        <label for="password"> Password </label>
+        <input
+          class="login-input"
+          type="password"
+          placeholder="password"
+          name="password"
+          [(ngModel)]="form.password"
+        />
       </div>
-      <button class="login-button">Login</button>
-    </mat-form-field>
+      <button class="login-button" type="submit">Login</button>
+    </form>
   </mat-card>
 </div>

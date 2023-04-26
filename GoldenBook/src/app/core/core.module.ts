@@ -14,6 +14,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     FooterComponent,
@@ -33,12 +35,14 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
     RouterModule,
     AppRoutingModule,
     MatCardModule,
+    FormsModule,
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     SidebarComponent,
     InitialPageComponent,
+    LoginComponent,
   ],
 })
 export class CoreModule {}
