@@ -9,9 +9,9 @@
       "alt": "Money power",
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":1998,
-      "isbn":123456,
+      "authorName": "John Doe",
+      "year": 1998,
+      "isbn": 123456,
       "rewiver": {
         "review": "123"
       }
@@ -21,13 +21,13 @@
       "title": "My First Love",
       "src": "assets/img/my-first-love.jpg",
       "surname": "Name Surname:2000",
-      "category":  "General",
+      "category": "General",
       "alt": "My First Love",
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":2000,
-      "isbn":11111,
+      "authorName": "John Doe",
+      "year": 2000,
+      "isbn": 11111,
       "rewiver": {
         "review": "1234"
       }
@@ -36,14 +36,14 @@
       "id": 3,
       "title": "My Little Life",
       "src": "assets/img/my-little-life.jpg",
-      "category":  "General",
+      "category": "General",
       "alt": "My Little Life",
       "surname": "Name Surname:2005",
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":2005,
-      "isbn":22222,
+      "authorName": "John Doe",
+      "year": 2005,
+      "isbn": 22222,
       "rewiver": {
         "review": "1111"
       }
@@ -57,9 +57,9 @@
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "category": "Fantasy",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":2008,
-      "isbn":33333,
+      "authorName": "John Doe",
+      "year": 2008,
+      "isbn": 33333,
       "rewiver": {
         "review": "1122"
       }
@@ -73,9 +73,9 @@
       "category": "History",
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":2010,
-      "isbn":44444,
+      "authorName": "John Doe",
+      "year": 2010,
+      "isbn": 44444,
       "rewiver": {
         "review": "2222"
       }
@@ -89,9 +89,9 @@
       "category": "Literary",
       "description": "Dictum pretium nulla nascetur diam malesuada curabitur lectus fames ornare posuere nec lacus.Parturient metus felis imperdiet! Curae; interdum consectetur nisl parturient aenean. Blandit diam class potenti eros.Vestibulum litora placerat ligula sapien eleifend orci rhoncus tincidunt convallis.",
       "deletedAt": null,
-      "authorName":"John Doe",
-      "year":2021,
-      "isbn":55555,
+      "authorName": "John Doe",
+      "year": 2021,
+      "isbn": 55555,
       "rewiver": {
         "review": "4444"
       }
@@ -99,19 +99,19 @@
   ],
   "categories": [
     {
-      "id":1,
+      "id": 1,
       "name": "General"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Fantasy"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "History"
     },
     {
-      "id":4,
+      "id": 4,
       "name": "Literary"
     }
   ],

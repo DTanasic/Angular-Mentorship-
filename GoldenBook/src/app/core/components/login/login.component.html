@@ -1,23 +1,24 @@
 <div class="login">
+  <div class="box-none"></div>
   <mat-card class="login-card">
     <h3>Log in</h3>
     <form (ngSubmit)="loginUser()">
-      <div>
+      <div class="input-field">
         <label for="email"> Email </label>
         <input
           class="login-input"
           type="email"
-          placeholder="email"
+          placeholder="Email*"
           name="email"
           [(ngModel)]="form.email"
         />
       </div>
-      <div>
+      <div class="input-field">
         <label for="password"> Password </label>
         <input
           class="login-input"
           type="password"
-          placeholder="password"
+          placeholder="Password*"
           name="password"
           [(ngModel)]="form.password"
         />
