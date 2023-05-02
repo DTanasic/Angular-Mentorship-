@@ -1,11 +1,11 @@
 import { SidebarService } from './../../services/sidebar.service';
-import { AdminLink } from './../../interfaces/admin-link.interface';
+import { AdminLink } from '../../../model/interfaces/admin-link.interface';
 import { Admin } from './../../../model/enum/admin.enum';
 import { Component, OnInit } from '@angular/core';
-import { Categories } from 'src/app/model/enum/categories.enum';
+
 import { Subject, takeUntil } from 'rxjs';
 import { CategoryService } from 'src/app/books/services/category.service';
-import { Category } from '../../interfaces/category.interface';
+import { Category } from 'src/app/model/interfaces/category.interface';
 
 @Component({
   selector: 'app-sidebar',

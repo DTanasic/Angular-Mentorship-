@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.mat-card ::ng-deep {
+  background: transparent;
+  color:$text-color;
+}
+.register-input-button {
+  margin:  25px 50px;
+  letter-spacing:2px;
+  padding: 3px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  background-color: gray;
+  color:$text-color;
+  display: inline-block;
+}
+.register-input-field {
+  margin-top: 25px;
+  text-align: center;
+}
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+.error {
+  color:red;
+}

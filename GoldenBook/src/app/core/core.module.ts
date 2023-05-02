@@ -11,11 +11,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
-import { LoginComponent } from './components/login/login.component';
+
 import { MatCardModule } from '@angular/material/card';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     SidebarComponent,
     LoginComponent,
     InitialPageComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +41,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCardModule,
     FormsModule,
     MatTooltipModule,
+    ReactiveFormsModule,
   ],
   exports: [
     FooterComponent,

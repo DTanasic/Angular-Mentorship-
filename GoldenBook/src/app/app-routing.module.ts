@@ -3,7 +3,9 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './core/components/login/login.component';
 import { InitialPageComponent } from './core/components/initial-page/initial-page.component';
-import { AuthGuard } from './core/components/guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard';
+import { AuthCanLoadGuard } from './core/guards/auth-can-load.guard';
+import { RegisterComponent } from './core/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,7 @@ const routes: Routes = [
           import('../app/books/books.module').then(
             (module) => module.BooksModule
           ),
+        canActivate: [AuthGuard],
       },
       {
         path: 'admin',
@@ -23,15 +26,20 @@ const routes: Routes = [
           import('../app/admin/admin.module').then(
             (module) => module.AdminModule
           ),
+        canLoad: [AuthCanLoadGuard],
       },
     ],
     canActivate: [AuthGuard],
   },
   {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
-  //
+
   {
     path: '**',
     component: NotFoundComponent,

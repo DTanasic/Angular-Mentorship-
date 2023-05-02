@@ -8,7 +8,7 @@ import {
 import { MatSelectChange } from '@angular/material/select';
 import { Subject, takeUntil } from 'rxjs';
 import { CategoryService } from 'src/app/books/services/category.service';
-import { Category } from 'src/app/core/interfaces/category.interface';
+import { Category } from 'src/app/model/interfaces/category.interface';
 
 @Component({
   selector: 'app-filter',

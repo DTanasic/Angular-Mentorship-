@@ -1,0 +1,106 @@
+<mat-card>
+  <form
+    class="example-form"
+    [formGroup]="registerForm"
+    (ngSubmit)="registerUser(registerForm.value)"
+  >
+    <div class="register-input-field">
+      <p>First Name</p>
+      <input
+        matInput
+        formControlName="firstName"
+        placeholder="First Name*"
+        ngModel
+        [formControl]="registerForm.controls.firstName"
+      />
+      <div class="error">
+        <p *ngIf="registerForm.controls.firstName.errors?.['required']">
+          Required or Wrong First Name
+        </p>
+      </div>
+    </div>
+    <div class="register-input-field">
+      <p>Last Name</p>
+      <input
+        matInput
+        formControlName="lastName"
+        placeholder="Last Name*"
+        ngModel
+        [formControl]="registerForm.controls.lastName"
+      />
+      <div class="error">
+        <p *ngIf="registerForm.controls.lastName.errors?.['required']">
+          Required or Wrong Last Name
+        </p>
+      </div>
+    </div>
+    <div class="register-input-field">
+      <p>Email</p>
+      <input
+        matInput
+        formControlName="email"
+        placeholder="Email*"
+        [formControl]="registerForm.controls.email"
+      />
+      <div class="error">
+        <p *ngIf="registerForm.controls.email.errors?.['required']">
+          Required or Wrong Email
+        </p>
+      </div>
+    </div>
+    <div class="register-input-field">
+      <p>Password</p>
+      <input
+        type="password"
+        matInput
+        formControlName="password"
+        placeholder="Password*"
+        ngModel
+        [formControl]="registerForm.controls.password"
+      />
+      <div class="error">
+        <p *ngIf="registerForm.controls.password.errors?.['required']">
+          Required or Wrong Password
+        </p>
+      </div>
+    </div>
+    <div class="register-input-field">
+      <p>Confirm Password</p>
+      <input
+        type="password"
+        matInput
+        placeholder="Confirm Password*"
+        formControlName="confirmPassword"
+        [formControl]="registerForm.controls.confirmPassword"
+      />
+      <div class="error">
+        <p *ngIf="registerForm.controls.confirmPassword.errors?.['required']">
+          Required or Wrong Password
+        </p>
+      </div>
+    </div>
+    <div class="register-input-field">
+      <p>Country</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Country</mat-label>
+        <mat-select formControlName="countryid" ngModel>
+          <mat-option *ngFor="let country of countries" [value]="country.id">
+            {{ country.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="register-input-field">
+      <button
+        class="register-input-button"
+        type="submit"
+        [disabled]="registerForm.invalid"
+      >
+        Register
+      </button>
+      <button class="register-input-button" (click)="login()">
+        <p>Login</p>
+      </button>
+    </div>
+  </form>
+</mat-card>

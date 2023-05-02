@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Login } from 'src/app/model/interfaces/login.interface';
-import { LoginServiceService } from '../services/login-service.service';
+import { Login, Register } from 'src/app/model/interfaces/login.interface';
+
 import { take } from 'rxjs';
+import { LoginServiceService } from '../../services/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,6 @@ export class LoginComponent implements OnInit {
       .subscribe((data: any) => {
         if (data.length) {
           localStorage.setItem('user_logged', JSON.stringify(data[0]));
-          console.log(data);
           this.router.navigateByUrl('/');
         } else {
           alert('User not found,try again!');

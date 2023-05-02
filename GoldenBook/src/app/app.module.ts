@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpRequestInterceptor } from './core/components/interceptor/http-request.interceptor';
+import { HttpRequestInterceptor } from './core/interceptor/http-request.interceptor';
 
 @NgModule({
   declarations: [AppComponent],

@@ -1,7 +1,7 @@
 import { BookService } from './../../services/book.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Category } from 'src/app/core/interfaces/category.interface';
 import { Book } from 'src/app/model/interfaces/book.model';
+import { Category } from 'src/app/model/interfaces/category.interface';
 
 @Component({
   selector: 'app-book',
