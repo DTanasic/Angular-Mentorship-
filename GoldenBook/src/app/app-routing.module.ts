@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './core/components/login/login.component';
 import { InitialPageComponent } from './core/components/initial-page/initial-page.component';
 import { AuthGuard } from './core/guards/auth.guard';
-import { AuthCanLoadGuard } from './core/guards/auth-can-load.guard';
 import { RegisterComponent } from './core/components/register/register.component';
+import { AdminAuthGuard } from './core/guards/admin-auth.guard';
 
 const routes: Routes = [
   {
@@ -26,7 +26,7 @@ const routes: Routes = [
           import('../app/admin/admin.module').then(
             (module) => module.AdminModule
           ),
-        canLoad: [AuthCanLoadGuard],
+        canActivate: [AdminAuthGuard],
       },
     ],
     canActivate: [AuthGuard],

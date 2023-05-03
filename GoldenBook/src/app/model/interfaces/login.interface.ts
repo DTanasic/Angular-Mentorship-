@@ -8,6 +8,6 @@ export interface Register extends Login {
   firstName: string;
   lastName: string;
   contryId: number;
-  role: Roles;
+  role: string;
   createdAt: string;
 }

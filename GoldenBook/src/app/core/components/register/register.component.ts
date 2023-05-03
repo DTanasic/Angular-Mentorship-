@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     ]),
     countryid: new FormControl('', Validators.required),
   });
-  public date = new Date();
+
   public countries: Country[] = [];
 
   private unsubscribe$ = new Subject<void>();

@@ -135,120 +135,44 @@
       "role": "admin"
     },
     {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "country": 2,
-      "id": 3
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345",
-      "country": 2,
-      "id": 4
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345",
-      "country": 2,
-      "id": 5
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "country": 2,
-      "id": 6
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "country": 1,
-      "id": 7
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "country": 2,
-      "id": 8
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "1111",
-      "confirmPassword": "1111",
-      "id": 9
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "countryid": 2,
-      "id": 10
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "countryid": 6,
-      "id": 11
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "countryid": 1,
-      "id": 12
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "132",
-      "countryid": 1,
-      "id": 13
-    },
-    {
-      "firstName": "Dusan",
-      "lastName": "Tanasic",
-      "email": "dusantanasic44@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "countryid": 1,
-      "id": 14
-    },
-    {
+      "contryId": 2,
       "firstName": "Dusan",
       "lastName": "Tanasic",
       "email": "dusantanasic44@gmail.com",
       "password": "dusan",
-      "confirmPassword": "dusan",
-      "countryid": 1,
-      "id": 15
+      "role": "user",
+      "createdAt": "2023-05-03T18:36:12.442Z",
+      "id": 16
+    },
+    {
+      "contryId": 2,
+      "firstName": "Dusan",
+      "lastName": "Tanasic",
+      "email": "dusantanasic44@gmail.com",
+      "password": "dusan",
+      "role": "user",
+      "createdAt": "2023-05-03T18:38:59.357Z",
+      "id": 17
+    },
+    {
+      "contryId": 2,
+      "firstName": "Dusan",
+      "lastName": "Tanasic",
+      "email": "dusantanasic44@gmail.com",
+      "password": "dusan",
+      "role": "user",
+      "createdAt": "2023-05-03T18:40:45.883Z",
+      "id": 18
+    },
+    {
+      "contryId": 2,
+      "firstName": "Dusan",
+      "lastName": "Tanasic",
+      "email": "dusantanasic44@gmail.com",
+      "password": "dusan",
+      "role": "user",
+      "createdAt": "2023-05-03T19:00:25.164Z",
+      "id": 19
     }
   ],
   "countries": [
