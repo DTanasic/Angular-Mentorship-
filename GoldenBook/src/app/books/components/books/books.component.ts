@@ -2,7 +2,6 @@ import { OnInit, Component, OnDestroy } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Subject, take, takeUntil } from 'rxjs';
 import { Book } from 'src/app/model/interfaces/book.model';
-import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-books',

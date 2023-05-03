@@ -1,12 +1,13 @@
-import { Country } from './country.interface';
+import { Roles } from '../enum/roles.emum';
 
 export interface Login {
   email: string;
   password: string;
 }
 export interface Register extends Login {
-  firtsName: string;
+  firstName: string;
   lastName: string;
-  id: number;
-  contryid: Country;
+  contryId: number;
+  role: Roles;
+  createdAt: string;
 }

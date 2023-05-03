@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Login, Register } from 'src/app/model/interfaces/login.interface';
+import { Login } from 'src/app/model/interfaces/login.interface';
 
 import { take } from 'rxjs';
 import { LoginServiceService } from '../../services/login-service.service';
@@ -29,7 +29,14 @@ export class LoginComponent implements OnInit {
       .pipe(take(1))
       .subscribe((data: any) => {
         if (data.length) {
-          localStorage.setItem('user_logged', JSON.stringify(data[0]));
+          localStorage.setItem(
+            'user_logged',
+            JSON.stringify({
+              firstName: data[0].firstName,
+              lastName: data[0].lastName,
+              role: data[0].role,
+            })
+          );
           this.router.navigateByUrl('/');
         } else {
           alert('User not found,try again!');

@@ -2,7 +2,7 @@
   <form
     class="example-form"
     [formGroup]="registerForm"
-    (ngSubmit)="registerUser(registerForm.value)"
+    (ngSubmit)="registerUser()"
   >
     <div class="register-input-field">
       <p>First Name</p>
@@ -10,7 +10,6 @@
         matInput
         formControlName="firstName"
         placeholder="First Name*"
-        ngModel
         [formControl]="registerForm.controls.firstName"
       />
       <div class="error">
@@ -25,7 +24,6 @@
         matInput
         formControlName="lastName"
         placeholder="Last Name*"
-        ngModel
         [formControl]="registerForm.controls.lastName"
       />
       <div class="error">
@@ -55,7 +53,6 @@
         matInput
         formControlName="password"
         placeholder="Password*"
-        ngModel
         [formControl]="registerForm.controls.password"
       />
       <div class="error">
@@ -76,6 +73,11 @@
       <div class="error">
         <p *ngIf="registerForm.controls.confirmPassword.errors?.['required']">
           Required or Wrong Password
+        </p>
+        <p
+          *ngIf="registerForm.controls.confirmPassword.errors?.['PasswordMatch']"
+        >
+          Passwords dont match
         </p>
       </div>
     </div>
