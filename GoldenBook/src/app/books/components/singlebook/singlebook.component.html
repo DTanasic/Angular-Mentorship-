@@ -3,7 +3,7 @@
     <div class="single-book-box">
       <h1 class="single-book-title">Book Overview-{{ book.title }}</h1>
       <div class="single-book" appBookBackground [category]="book.category">
-        <h2>{{ book.title }}</h2>
+        <h2>{{ book.title | titlecase }}</h2>
         <div class="single-book-content">
           <div class="single-book-img">
             <img [alt]="book.alt" [src]="book.src" />
@@ -13,8 +13,10 @@
             appBookBackground
             [category]="book.category"
           >
-            <p class="single-book-id">BookID:{{ bookId }}</p>
-            <p class="bold-text">{{ book.surname }}</p>
+            <p class="single-book-id">BookID:{{ book.id }}</p>
+            <p class="bold-text">
+              {{ book | fullname }}{{ book.year | date : "yyyy" }}
+            </p>
             <p>Contry:USA</p>
             <p>{{ book.category }}</p>
             <p>ISBN:1234567890</p>

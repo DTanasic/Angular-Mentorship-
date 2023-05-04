@@ -11,7 +11,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
-
 import { MatCardModule } from '@angular/material/card';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,6 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ValidationPipe } from './pipe/validation.pipe';
+import { FullnamePipe } from './pipe/fullname.pipe';
 
 @NgModule({
   declarations: [

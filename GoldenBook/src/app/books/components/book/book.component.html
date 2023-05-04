@@ -1,15 +1,17 @@
 <div class="box" appBookBackground [category]="book.category">
-  <h3>{{ book.title }}</h3>
+  <h3>{{ book.title | titlecase }}</h3>
   <div class="box-inside">
     <div class="box-content">
       <img [alt]="book.alt" [src]="book.src" />
     </div>
     <div class="box-info" appBookBackground [category]="book.category">
       <div class="box-description">
-        <p class="book-surname">{{ book.surname }}</p>
+        <p class="book-surname">
+          {{ book | fullname }} {{ book.year | date : "yyyy" }}
+        </p>
         <p>{{ book.category }}</p>
         <div class="box-par">
-          <p class="italic-text">{{ book.description }}</p>
+          <p class="italic-text">{{ book.description | slice : 0 : 56 }}</p>
         </div>
       </div>
       <div class="book-button">

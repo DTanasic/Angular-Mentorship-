@@ -3,8 +3,10 @@ export interface Book {
   title: string;
   alt: string;
   src: string;
-  surname: string;
+  authorName: string;
+  authorSurname: string;
   category: string;
   description: string;
   deletedAt: string;
+  year: Date;
 }
