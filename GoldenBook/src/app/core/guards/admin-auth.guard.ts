@@ -1,27 +1,13 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanLoad, UrlTree } from '@angular/router';
+import { RegisterService } from '../services/register.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AdminAuthGuard implements CanActivate {
-  canActivate():
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    const userLogged = localStorage.getItem('user_logged');
-    const obj = JSON.parse(userLogged!);
-    if (obj.role === 'user') {
-      return false;
-    } else {
-      return true;
-    }
+export class AdminAuthGuard implements CanLoad {
+  constructor(private registerService: RegisterService) {}
+  canLoad(): boolean {
+    return this.registerService.isAdmin();
   }
 }

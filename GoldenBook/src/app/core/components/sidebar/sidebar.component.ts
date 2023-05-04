@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { CategoryService } from 'src/app/books/services/category.service';
 import { Category } from 'src/app/model/interfaces/category.interface';
+import { RegisterService } from '../../services/register.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,6 +14,7 @@ import { Category } from 'src/app/model/interfaces/category.interface';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+  isAdmin = false;
   adminTab: boolean = false;
   categoryTab: boolean = false;
   categories: Category[] = [];
@@ -29,10 +31,14 @@ export class SidebarComponent implements OnInit {
       path: 'category',
     },
   ];
-  constructor(private categoryService: CategoryService) {}
+  constructor(
+    private categoryService: CategoryService,
+    private registerService: RegisterService
+  ) {}
 
   ngOnInit(): void {
     this.getAllCategories();
+    this.isAdmin = this.registerService.isAdmin();
   }
 
   unsubscribeAll(): void {

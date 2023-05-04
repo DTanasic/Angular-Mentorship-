@@ -1,6 +1,9 @@
 @import "../../../styles/variables.scss";
 
 .mat-card ::ng-deep {
+  display: flex;
+  justify-content: flex-end;
+  margin: 35px 35px 0px 0px;
   background: transparent;
   color:$text-color;
 }
@@ -16,12 +19,27 @@
   display: inline-block;
 }
 .register-input-field {
-  margin-top: 25px;
+  margin-top: 10px;
   text-align: center;
+  input {
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
 }
 input.ng-invalid.ng-touched{
   border: 2px solid red;
 }
 .error {
-  color:red;
+  color:$text-color;
+}
+.hover-login {
+  color:$text-color;
+  text-decoration: none;
+}
+.hover-login:hover {
+  cursor: pointer;
+}
+.mat-form-field-appearance-fill.mat-form-field-flex ::ng-deep {
+  background-color: white !important;
 }

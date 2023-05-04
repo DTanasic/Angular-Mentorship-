@@ -23,4 +23,10 @@ export class RegisterService {
       data
     );
   }
+
+  isAdmin(): boolean {
+    const userLogged = localStorage.getItem('user_logged');
+    const logedUser = JSON.parse(userLogged!);
+    return logedUser.role === 'admin';
+  }
 }

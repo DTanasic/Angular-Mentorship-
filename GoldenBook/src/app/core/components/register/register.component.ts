@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from '../../services/register.service';
 import { Subject, take } from 'rxjs';
 import { Country } from 'src/app/model/interfaces/country.interface';
@@ -17,24 +17,22 @@ export class RegisterComponent implements OnInit, OnDestroy {
     private router: Router
   ) {}
 
+  private readonly validationName = [
+    Validators.required,
+    Validators.pattern(/^[A-Z][a-z]+$/),
+  ];
+
+  private readonly validationPassword = [
+    Validators.required,
+    Validators.pattern(/^\S{8,}$/),
+  ];
+
   registerForm = new FormGroup({
-    firstName: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^[A-Z][a-z]{2,10}$/),
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^[A-Z][a-z]{2,20}$/),
-    ]),
+    firstName: new FormControl('', this.validationName),
+    lastName: new FormControl('', this.validationName),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\w{2,10}$/),
-    ]),
-    confirmPassword: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\w{2,10}$/),
-    ]),
+    password: new FormControl('', this.validationPassword),
+    confirmPassword: new FormControl('', this.validationPassword),
     countryid: new FormControl('', Validators.required),
   });
 

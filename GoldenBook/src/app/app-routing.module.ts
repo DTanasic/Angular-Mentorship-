@@ -26,7 +26,7 @@ const routes: Routes = [
           import('../app/admin/admin.module').then(
             (module) => module.AdminModule
           ),
-        canActivate: [AdminAuthGuard],
+        canLoad: [AdminAuthGuard],
       },
     ],
     canActivate: [AuthGuard],

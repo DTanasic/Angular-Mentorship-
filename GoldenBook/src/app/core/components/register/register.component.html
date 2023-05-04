@@ -13,9 +13,12 @@
         [formControl]="registerForm.controls.firstName"
       />
       <div class="error">
-        <p *ngIf="registerForm.controls.firstName.errors?.['required']">
-          Required or Wrong First Name
-        </p>
+        <span *ngIf="registerForm.controls.firstName | validation : 'required'">
+          Required First Name
+        </span>
+        <span *ngIf="registerForm.controls.firstName | validation : 'pattern'">
+          Wrong First name
+        </span>
       </div>
     </div>
     <div class="register-input-field">
@@ -27,9 +30,12 @@
         [formControl]="registerForm.controls.lastName"
       />
       <div class="error">
-        <p *ngIf="registerForm.controls.lastName.errors?.['required']">
-          Required or Wrong Last Name
-        </p>
+        <span *ngIf="registerForm.controls.lastName | validation : 'required'">
+          Required Last Name
+        </span>
+        <span *ngIf="registerForm.controls.lastName | validation : 'pattern'">
+          Wrong Last name
+        </span>
       </div>
     </div>
     <div class="register-input-field">
@@ -41,9 +47,12 @@
         [formControl]="registerForm.controls.email"
       />
       <div class="error">
-        <p *ngIf="registerForm.controls.email.errors?.['required']">
-          Required or Wrong Email
-        </p>
+        <span *ngIf="registerForm.controls.email | validation : 'required'">
+          Required Email
+        </span>
+        <span *ngIf="registerForm.controls.email | validation : 'pattern'">
+          Wrong Email
+        </span>
       </div>
     </div>
     <div class="register-input-field">
@@ -56,9 +65,12 @@
         [formControl]="registerForm.controls.password"
       />
       <div class="error">
-        <p *ngIf="registerForm.controls.password.errors?.['required']">
-          Required or Wrong Password
-        </p>
+        <span *ngIf="registerForm.controls.password | validation : 'required'">
+          Required Password
+        </span>
+        <span *ngIf="registerForm.controls.password | validation : 'pattern'">
+          Wrong Password
+        </span>
       </div>
     </div>
     <div class="register-input-field">
@@ -71,19 +83,26 @@
         [formControl]="registerForm.controls.confirmPassword"
       />
       <div class="error">
-        <p *ngIf="registerForm.controls.confirmPassword.errors?.['required']">
-          Required or Wrong Password
-        </p>
-        <p
+        <span
+          *ngIf="
+            registerForm.controls.confirmPassword | validation : 'required'
+          "
+        >
+          Required Password
+        </span>
+        <span *ngIf="registerForm.controls.password | validation : 'pattern'">
+          Wrong Password
+        </span>
+        <span
           *ngIf="registerForm.controls.confirmPassword.errors?.['PasswordMatch']"
         >
           Passwords dont match
-        </p>
+        </span>
       </div>
     </div>
     <div class="register-input-field">
       <p>Country</p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="countries-select">
         <mat-label>Select Country</mat-label>
         <mat-select formControlName="countryid" ngModel>
           <mat-option *ngFor="let country of countries" [value]="country.id">
@@ -91,6 +110,11 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <div class="error">
+        <span *ngIf="registerForm.controls.countryid | validation : 'required'">
+          Required to select a country
+        </span>
+      </div>
     </div>
     <div class="register-input-field">
       <button
@@ -100,9 +124,11 @@
       >
         Register
       </button>
-      <button class="register-input-button" (click)="login()">
-        <p>Login</p>
-      </button>
+    </div>
+    <div class="register-input-field">
+      <p>
+        You have a account. <a class="hover-login" (click)="login()">Login</a>
+      </p>
     </div>
   </form>
 </mat-card>

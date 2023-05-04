@@ -173,6 +173,16 @@
       "role": "user",
       "createdAt": "2023-05-03T19:00:25.164Z",
       "id": 19
+    },
+    {
+      "contryId": 2,
+      "firstName": "Dusan",
+      "lastName": "Tanasic",
+      "email": "dusantanasic44@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "createdAt": "2023-05-04T09:16:04.780Z",
+      "id": 20
     }
   ],
   "countries": [
